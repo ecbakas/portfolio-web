@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(outfit.className, "antialiased overflow-hidden h-screen")}>
+      <body className={cn(outfit.className, "antialiased overflow-hidden h-screen h-dvh")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
