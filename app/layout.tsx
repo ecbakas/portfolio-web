@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import Footer from "@/components/molecules/footer";
 import Navbar from "@/components/molecules/navbar";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from "@/components/theme-provides";
+import { ThemeProvider } from "@/lib/theme-provider";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 // If loading a variable font, you don't need to specify the font weight
