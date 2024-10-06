@@ -2,7 +2,7 @@ import CalltoAction from "@/components/molecules/cta";
 import DownloadResume from "@/components/molecules/download-resume";
 import Title from "@/components/molecules/title";
 import { Card } from "@/components/ui/card";
-import memoji from "../../app/assets/memoji.png";
+import memoji from "@/public/memoji.png";
 import Image from "next/image";
 export default function Home() {
   return (
