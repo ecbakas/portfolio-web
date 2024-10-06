@@ -12,7 +12,7 @@ export default function CopyMail() {
           title: "Copied",
           description: "Email address copied to clipboard.",
         });
-        navigator.clipboard.writeText("pVJZS@example.com");
+        navigator.clipboard.writeText("ecbakas@gmail.com");
       }}
     >
       <Copy className="mr-2 w-4" />
