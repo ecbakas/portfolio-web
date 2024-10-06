@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import memoji from "../../app/assets/memoji.png";
+import memoji from "@/public/memoji.png";
 import CopyMail from "./copy-mail";
 import HireMe from "./hire-me";
 import Title from "./title";
