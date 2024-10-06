@@ -8,7 +8,7 @@ export default function CalltoAction() {
         Let’s work together.
       </h3>
       <p className="text-center text-muted-foreground">
-        Creating user experience and visual appealing design.
+        Design and develop something great.
       </p>
       <div className="space-x-2">
         <HireMe />
