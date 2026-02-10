@@ -4,7 +4,6 @@ import Title from "@/components/molecules/title";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -23,29 +22,43 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import AvailableBadge from "@/components/molecules/available-badge";
 
-const FormSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
-  }),
-  email: z.string().email({
-    message: "Email must be valid.",
-  }),
-  message: z.string().optional(),
-});
+import { ContactFormSchema, ContactFormData } from "./schema";
+import { sendContactEmail } from "./actions";
+
 export default function Page() {
-  const form = useForm<z.infer<typeof FormSchema>>({
-    resolver: zodResolver(FormSchema),
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(ContactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });
+  async function onSubmit(data: ContactFormData) {
+    try {
+      const result = await sendContactEmail(data);
+
+      if (result.success) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        toast({
+          variant: "destructive",
+          title: "Error sending message",
+          description: result.error || "Please try again later.",
+        });
+      }
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Unexpected error",
+        description: "Something went wrong. Please try again later.",
+      });
+    }
   }
   return (
     <div className="space-y-8 p-4">
@@ -118,8 +131,8 @@ export default function Page() {
               </FormItem>
             )}
           />
-          <Button className="col-span-2" type="submit">
-            Submit
+          <Button className="col-span-2" type="submit" disabled={form.formState.isSubmitting}>
+            {form.formState.isSubmitting ? "Sending..." : "Submit"}
           </Button>
         </form>
       </Form>
