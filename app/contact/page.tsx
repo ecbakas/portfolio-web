@@ -52,7 +52,7 @@ export default function Page() {
           description: result.error || "Please try again later.",
         });
       }
-    } catch (error) {
+    } catch {
       toast({
         variant: "destructive",
         title: "Unexpected error",
