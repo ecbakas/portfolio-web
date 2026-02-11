@@ -3,7 +3,7 @@ import CalltoAction from "@/components/molecules/cta";
 
 export default function KnowledgeBasePage() {
     return (
-        <div className="space-y-6 pt-12">
+        <div className="space-y-6 p-4">
             <KnowledgeBase />
             <CalltoAction />
         </div>

@@ -93,7 +93,7 @@ export default function KnowledgeBase({ minimal = false }: { minimal?: boolean }
     const t = useTranslations("KnowledgeBase");
 
     return (
-        <Card className="flex flex-col gap-6 shadow-none bg-transparent border-none p-0 my-2">
+        <Card className="flex flex-col gap-6 shadow-none bg-transparent border-none p-0">
             <Title title={t("title")} className="flex-col justify-start items-start">
                 <p className="text-sm text-zinc-500 max-w-md">
                     {t("description")}
