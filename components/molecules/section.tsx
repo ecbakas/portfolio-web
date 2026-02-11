@@ -129,7 +129,7 @@ export function SectionItem({ item }: { item: SectionItem }) {
   const t = useTranslations("Projects.items");
   const tagsT = useTranslations("Tags");
   return (
-    <Button asChild variant={"outline"} className="w-full items-start">
+    <Button asChild variant={"outline"} className="w-full items-start justify-stretch">
       <Link
         href={item.link.href}
         target={item.link.target}
