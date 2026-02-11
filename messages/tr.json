@@ -1,0 +1,621 @@
+{
+  "Metadata": {
+    "title": "Ertugrulcan Bakas - Portfolyo",
+    "description": "Next.js ve Tailwind CSS ile Ertuğrulcan tarafından geliştirildi. Kendi sunucumda Coolify ile yayına alındı."
+  },
+  "Common": {
+    "hireMe": "Bana Ulaşın",
+    "copyMail": "E-postayı Kopyala",
+    "copied": "Kopyalandı",
+    "emailCopiedDesc": "E-posta adresi panoya kopyalandı.",
+    "availableForWork": "Çalışmaya hazır",
+    "downloadResume": "Özgeçmişimi indir"
+  },
+  "Navbar": {
+    "home": "Anasayfa",
+    "about": "Hakkında",
+    "projects": "Projeler",
+    "contact": "İletişim"
+  },
+  "Footer": {
+    "followMe": "Beni takip et",
+    "copyright": "© 2026 Ertuğrulcan Bakas"
+  },
+  "Hero": {
+    "jobTitle": "Frontend Geliştirici",
+    "intro": "Ben Ertuğrulcan Bakas",
+    "description": "Türkiye'den bir frontend geliştiriciyim. Şu anda Ayasofyazılım'da geliştirme yapıyorum."
+  },
+  "CTA": {
+    "title": "Birlikte çalışalım.",
+    "description": "Harika bir şeyler tasarlayalım ve geliştirelim."
+  },
+  "AboutPage": {
+    "title": "Hakkında",
+    "greeting": "Selam, ben Ertuğrulcan",
+    "p1": "Merhaba, ben Ertuğrulcan. Temel odak noktam frontend geliştirme olsa da, tüm web yığınına dair derin bir anlayışa sahibim ve bu sayede uçtan uca sağlam çözümler üretebiliyorum. 2018 yılında Bilgisayar Programcılığı bölümünden mezun oldum ve o zamandan beri yazılım geliştirmenin tüm yelpazesinde kendimi geliştiriyorum.",
+    "p2": "Uzmanlığım sadece kullanıcı arayüzünün ötesine geçiyor. React, Next.js, React Native, Expo, Shadcn UI ve Tailwind CSS gibi modern frontend teknolojilerinin yanı sıra Figma, Photoshop ve After Effects gibi tasarım araçlarında da yetkinim.",
+    "p3": "Backend ve altyapı tarafında Node.js, WebSocket, JWT, Auth.js ve PostgreSQL, MS SQL gibi veritabanlarıyla çalışıyorum. Dağıtım süreçlerini Docker, Docker Compose, Coolify ve Traefik, Caddy, Nginx gibi reverse proxy araçlarıyla yönetiyorum. Ayrıca Ubuntu/Linux bash ve SSH ile sunucu yönetimi yapıyor, Cloudflare WAF ve DNS kullanarak uygulamaları güvence altına alıyorum.",
+    "p4": "Playwright ile E2E testleri yaparak kaliteyi sağlıyor ve GitHub Actions kullanarak iş akışlarını otomatikleştiriyorum. Şu anda Ayasofyazılım'da çalışıyor, bilgilerimi genişletmeye ve açık kaynaklı projelere katkıda bulunmaya devam ediyorum."
+  },
+  "ContactPage": {
+    "title": "Bana ulaşın",
+    "inquiry": "Talep",
+    "inquiryDesc": "Yardıma mı ihtiyacınız var yoksa sadece merhaba mı demek istiyorsunuz? Hemen bana ulaşın",
+    "scheduleMeeting": "cal.com üzerinden bir toplantı planlayın",
+    "or": "ya da",
+    "form": {
+      "name": "İsim",
+      "namePlaceholder": "John Doe",
+      "email": "E-posta Adresi",
+      "emailPlaceholder": "test@test.com",
+      "message": "Mesaj",
+      "messagePlaceholder": "Şunun için ulaşıyorum...",
+      "submit": "Gönder",
+      "sending": "Gönderiliyor...",
+      "validation": {
+        "nameMin": "İsim en az 2 karakter olmalıdır.",
+        "emailInvalid": "Geçerli bir e-posta adresi giriniz.",
+        "invalidForm": "Geçersiz form verisi",
+        "unexpected": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin."
+      }
+    },
+    "toasts": {
+      "success": "Mesaj gönderildi!",
+      "successDesc": "Ulaştığınız için teşekkürler. En kısa sürede size döneceğim.",
+      "error": "Mesaj gönderilirken hata oluştu",
+      "errorDesc": "Lütfen daha sonra tekrar deneyin.",
+      "unexpected": "Beklenmedik hata",
+      "unexpectedDesc": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+  "Projects": {
+    "title": "Projeler",
+    "viewAll": "Tümünü Gör",
+    "items": {
+      "runeRivals": {
+        "title": "Rune Rivals",
+        "description": "Rekabetçi bir alan kontrol oyunu."
+      },
+      "birfaturaWrapper": {
+        "title": "Birfatura Wrapper",
+        "description": "Birfatura API için bir wrapper API."
+      },
+      "strapiCmsCore": {
+        "title": "Strapi CMS Core",
+        "description": "Landing projeleri için bir Strapi CMS."
+      },
+      "r10ProBot": {
+        "title": "R10 Pro Bot",
+        "description": "Akıllı forum otomasyon ve öne çıkarma aracı."
+      },
+      "telegramBotManager": {
+        "title": "Telegram Bot Manager",
+        "description": "Gelişmiş çoklu bot yönetim sistemi."
+      },
+      "paduInsaat": {
+        "title": "Padu Insaat",
+        "description": "Premium inşaat şirketi tanıtım sayfası."
+      },
+      "ayasofyazilimUi": {
+        "title": "Ayasofyazılım UI",
+        "description": "AyasofyazılımUI kütüphanesini güncelleme ve geliştirme."
+      },
+      "schemaForm": {
+        "title": "SchemaForm",
+        "description": "JSON Schema standardı ile şemadan form oluşturma."
+      }
+    }
+  },
+  "ProjectPage": {
+    "backLabel": "Geri Dön",
+    "techStackTitle": "Teknoloji Yığını",
+    "cta": {
+      "interested": "Bu projeyle ilgileniyor musunuz?",
+      "ready": "Harika bir şeyler inşa etmeye hazır mısınız?",
+      "description": "Modern tanıtım sayfalarından karmaşık web uygulamalarına kadar, vizyonunuzu hayata geçirmenize yardımcı oluyorum.",
+      "button": "İletişime Geç"
+    }
+  },
+  "Theme": {
+    "toggle": "Temayı değiştir",
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem"
+  },
+  "Language": {
+    "toggle": "Dili Değiştir",
+    "en": "İngilizce",
+    "tr": "Türkçe"
+  },
+  "PaduInsaat": {
+    "hero": {
+      "title": "Modern İnşaat Mükemmelliği.",
+      "description": "14 yıllık deneyime sahip bir inşaat şirketi olan Padu İnşaat için premium bir tanıtım sayfası. Site, gelişmiş GSAP animasyonları, filtrelenebilir bir proje galerisi ve yüksek performanslı duyarlı bir tasarıma sahiptir."
+    },
+    "features": {
+      "title": "Önemli Noktalar",
+      "list": {
+        "animations": {
+          "title": "Gelişmiş Animasyonlar",
+          "description": "GSAP ve Framer Motion tarafından desteklenen sürükleyici kaydırma deneyimleri ve giriş animasyonları."
+        },
+        "gallery": {
+          "title": "Proje Galerisi",
+          "description": "Kullanıcıların projeleri kategoriye göre (Konut, Ticari, Tadilat) incelemesine olanak tanıyan dinamik filtreleme sistemi."
+        },
+        "expertise": {
+          "title": "14 Yıllık Uzmanlık",
+          "description": "Şirketin köklü geçmişini, kalite ve güvene olan bağlılığını sergiliyor."
+        },
+        "customer": {
+          "title": "Müşteri Odaklı",
+          "description": "Müşteri yorumları ve ayrıntılı hizmet açıklamaları için ayrılmış bölümler."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Site Yapısı",
+      "list": {
+        "hero": {
+          "title": "Hero Slider",
+          "description": "Temel değer önerilerini sergileyen yüksek etkili görsel slider."
+        },
+        "services": {
+          "title": "Hizmetler ve Projeler",
+          "description": "Hizmetleri ve portföy öğelerini etkili bir şekilde sunmak için temiz, ızgara tabanlı düzenler."
+        }
+      }
+    },
+    "tech": {
+      "description": "Hız, SEO ve kullanıcı deneyimi için en yeni web teknolojileriyle derlendi.",
+      "platform": "Framework ve Çekirdek",
+      "styling": "Stil ve Animasyon",
+      "items": {
+        "nextjs": {
+          "name": "Next.js 16",
+          "description": "En son App Router özelliklerini kullanan web için React framework'ü."
+        },
+        "react": {
+          "name": "React 19",
+          "description": "Eşzamanlı render ve sunucu bileşenleri için en yeni React özelliklerinden yararlanır."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Proje genelinde tip güvenliği ve kod bakımı kolaylığı sağlar."
+        },
+        "tailwind": {
+          "name": "Tailwind CSS v4",
+          "description": "Hızlı ve modern kullanıcı arayüzü geliştirme için yardımcı program öncelikli CSS framework'ü."
+        },
+        "gsap": {
+          "name": "GSAP",
+          "description": "Karmaşık zaman tünelleri için profesyonel düzeyde JavaScript animasyon kütüphanesi."
+        },
+        "framer": {
+          "name": "Framer Motion",
+          "description": "React bileşenleri için üretim kalitesinde hareket kütüphanesi."
+        }
+      }
+    }
+  },
+  "RuneRivals": {
+    "hero": {
+      "title": "Izgaraya Hükmet. Elementleri Ele Geçir.",
+      "description": "Rune Rivals, 6x6'lık bir ızgara üzerinde oynanan stratejik, sıra tabanlı bir oyundur. Karoları ele geçirin, bulmacaları çözün ve rakiplerinize üstünlük sağlamak için güçlü eşyalar kullanın. Elementinizi (Ateş, Su, Toprak veya Hava) seçin ve üstünlük için savaşın."
+    },
+    "roomOptions": {
+      "title": "Oda Özelleştirme",
+      "categories": {
+        "title": "Kategoriler",
+        "value": "5 Tür",
+        "description": "Matematik, Refleks, Hafıza, Kelime, Karma"
+      },
+      "turnTime": {
+        "title": "Tur Süresi",
+        "value": "Değişken",
+        "description": "Tur başına 15sn, 30sn veya 60sn"
+      },
+      "players": {
+        "title": "Oyuncular",
+        "value": "2 veya 4",
+        "description": "Bire bir veya herkes tek"
+      },
+      "bots": {
+        "title": "Botlar",
+        "value": "Yapay Zeka",
+        "description": "Boş slotları doldurmak için bot ekle"
+      }
+    },
+    "gameLogic": {
+      "title": "Nasıl Oynanır",
+      "mechanics": {
+        "title": "Temel Mekanikler",
+        "grid": "Oyun 6x6'lık bir ızgara üzerinde oynanır. Her oyuncu bir elementi (Ateş, Su, Toprak, Hava) kontrol eder.",
+        "capture": "Her turda, odanın kategorisine bağlı bir soruyu çözerek bir karoyu ele geçirirsiniz.",
+        "jump": "Seçtiğiniz karo bir düşman karosunun üzerinden \"atlarsa\", hem boş karoyu hem de düşmanın karosunu ele geçirmeye çalışırsınız.",
+        "note": "Not: Düşman karolarını ele geçirmek soruyu zorlaştırır!"
+      },
+      "scoring": {
+        "title": "Puanlama ve Kazanma",
+        "corners": "Köşeler:",
+        "borders": "Kenarlar:",
+        "inner": "İç Karolar:",
+        "pts": "puan",
+        "summary": "Puanlar, \"Eşya Modu\" aktifse güçlü eşyalar satın almak için kullanılır. Oyun sonunda en çok karosu/puanı olan oyuncu kazanır!"
+      }
+    },
+    "items": {
+      "title": "Güçlendiriciler ve Eşyalar",
+      "modeLabel": "Eşya Modu: AÇIK/KAPALI",
+      "shield": "Kendi karolarınıza uygulayarak onları düşmanlar tarafından değiştirilmekten veya ele geçirilmekten koruyun.",
+      "trap": "Boş karolara yerleştirin. Düşmanlara görünmez! Eğer seçerlerse puanları 50 azalır.",
+      "strike": "Çevresindeki bir karoyu ele geçirmeye gerek kalmadan bir düşman karosuna doğrudan saldırın.",
+      "phoenix": "Yanlış cevap verirseniz ikinci bir şans (yeni soru) verir.",
+      "names": {
+        "shield": "Kalkan",
+        "trap": "Tuzak",
+        "strike": "Saldırı",
+        "phoenix": "Anka"
+      }
+    },
+    "gallery": {
+      "title": "Galeri",
+      "entry": "Rune Rivals Giriş Ekranı",
+      "create": "Rune Rivals Oyun Kurma Ekranı",
+      "lobby": "Rune Rivals Oyun Lobisi",
+      "action": "Rune Rivals Oyun İçi Aksiyon",
+      "strategy": "Rune Rivals Oyun İçi Strateji"
+    },
+    "tech": {
+      "description": "Rune Rivals'ı inşa etmek ve tasarlamak için kullanılan modern teknolojiler ve araçlar.",
+      "mobile": "Mobil (Frontend)",
+      "backend": "Backend (Oyun Sunucusu)",
+      "devops": "Altyapı ve DevOps",
+      "creative": "Tasarım ve Yaratıcı",
+      "items": {
+        "expo": {
+          "name": "React Native (Expo)",
+          "description": "Verimli platformlar arası teslimat için tek bir kod tabanıyla yerel performans sağlar."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Tip güvenliğini sağlar ve karmaşık kod tabanındaki çalışma zamanı hatalarını büyük ölçüde azaltır."
+        },
+        "reanimated": {
+          "name": "React Native Reanimated",
+          "description": "Oyun hissi için gerekli olan ipeksi pürüzsüzlükte 60 fps animasyonlar sağlar."
+        },
+        "socketio_client": {
+          "name": "Socket.IO Client",
+          "description": "Gerçek zamanlı çok oyunculu senkronizasyon için düşük gecikmeli bağlantı gereklidir."
+        },
+        "zustand": {
+          "name": "Zustand",
+          "description": "Render gecikmesi olmadan hızlı oyun durumu güncellemelerini yönetmek için minimalist durum yönetimi."
+        },
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Paylaşılan tipler ve mantık için frontend ile aynı dili kullanır."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "API uç noktaları ve middleware yönetimi için basit ve sağlam yönlendirme."
+        },
+        "socketio": {
+          "name": "Socket.IO",
+          "description": "Oda yönetimini ve olaya dayalı oyun mantığını güvenilir bir şekilde yönetir."
+        },
+        "node_typescript": {
+          "name": "TypeScript",
+          "description": "Backend genelindeki sıkı yazım, oyun sırasında kritik mantık hatalarını önler."
+        },
+        "supabase": {
+          "name": "Supabase Self-Hosted",
+          "description": "Anında üretime hazır bir veritabanı ve kimlik doğrulama sistemi sağlar."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Oyun sunucusunun geliştirme ve üretim aşamalarında aynı şekilde çalışmasını garanti eder."
+        },
+        "coolify": {
+          "name": "Coolify",
+          "description": "Otomatik dağıtımlarla oyun sunucusuna ev sahipliği yapmayı kolaylaştırır."
+        },
+        "eas": {
+          "name": "EAS Build",
+          "description": "Daha hızlı iterasyon için karmaşık yerel derlemeleri bulut sistemlerine yükler."
+        },
+        "figma": {
+          "name": "Figma",
+          "description": "Oyun kullanıcı arayüzü ve kullanıcı akışlarının hızlı prototiplenmesi."
+        },
+        "photoshop": {
+          "name": "Photoshop",
+          "description": "Oyun varlıklarının oluşturulması ve düzenlenmesi."
+        },
+        "gemini": {
+          "name": "Gemini",
+          "description": "Oyun varlıkları oluşturmak için."
+        }
+      }
+    }
+  },
+  "Birfatura": {
+    "hero": {
+      "title": "Kusursuz E-Fatura Entegrasyonu.",
+      "description": "Geliştiriciler için e-fatura yönetimini basitleştiren, Birfatura API için güçlü bir Node.js wrapper'ı. Kapsamlı tip tanımlamaları ve kullanımı kolay kimlik doğrulama içerir."
+    },
+    "features": {
+      "title": "Temel Yetenekler",
+      "sync": {
+        "title": "Gerçek Zamanlı Senkronizasyon",
+        "description": "Yeni ödemeleri PerfectPanel'den anında alır ve faturaların gecikmeden oluşturulmasını sağlar."
+      },
+      "typeSafe": {
+        "title": "Tip Güvenli Çekirdek",
+        "description": "Sipariş, Ödeme ve API yanıtları için tamamen tipleştirilmiş arayüzler, güvenilirliği garanti eder ve çalışma zamanı hatalarını önler."
+      },
+      "config": {
+        "title": "Yapılandırılabilir",
+        "description": "Ortam tabanlı yapılandırma, farklı panel ortamlarında ve API anahtarlarıyla kolay dağıtım sağlar."
+      },
+      "secure": {
+        "title": "Güvenli API",
+        "description": "Uç noktaları güvence altına almak ve yetkisiz fatura oluşturulmasını önlemek için token tabanlı kimlik doğrulama uygular."
+      }
+    },
+    "workflow": {
+      "title": "Entegrasyon İş Akışı",
+      "source": {
+        "title": "PerfectPanel Kaynağı",
+        "description": "Siparişleri çekmek için PerfectPanel adminapi'ye bağlanır. Tarih aralıklarına ve ödeme durumlarına göre karmaşık filtreleme yapar."
+      },
+      "target": {
+        "title": "BirFatura Hedefi",
+        "description": "Verileri BirFatura'nın beklediği özel JSON yapısına dönüştürür. KDV hesaplamasını ve müşteri detaylarının formatlanmasını yönetir."
+      }
+    },
+    "tech": {
+      "description": "Güvenilirlik, güvenlik ve performans sağlamak için sağlam bir teknoloji seçimiyle oluşturulmuştur.",
+      "backend": "Çekirdek ve Backend",
+      "security": "Mimari ve Güvenlik",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Eşzamanlı API isteklerini ve arka plan senkronizasyonunu işlemek için yüksek performanslı çalışma zamanı."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "API katmanı için sağlam yönlendirme ve ara yazılım yetenekleri sağlayan minimalist web framework."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Veri dönüştürme katmanları genelinde katı tip güvenliği sağlayarak finansal mantıktaki çalışma zamanı hatalarını önler."
+        },
+        "middleware": {
+          "name": "Ara Yazılım Düzeni",
+          "description": "İstek günlüğü, hata yönetimi ve belirteç tabanlı kimlik doğrulama için özel ara yazılım."
+        },
+        "rest": {
+          "name": "REST API",
+          "description": "BirFatura'nın beklenen entegrasyon formatıyla kusursuz uyum sağlayan standartlaştırılmış uç noktaları açar."
+        },
+        "token": {
+          "name": "Belirteç Kimliğini Doğrulama",
+          "description": "Bearer token doğrulaması kullanarak servisler arasında güvenli iletişim."
+        }
+      }
+    }
+  },
+  "R10Up": {
+    "hero": {
+      "title": "Akıllı Forum Otomasyonu.",
+      "description": "R10.net kullanıcılarının konularını yönetmeleri için otomatik bir çözüm. Akıllı öne çıkarma, zamanlama yönetimi ve detaylı analitik sunar."
+    },
+    "features": {
+      "title": "Temel Yetenekler",
+      "emulation": {
+        "title": "Gerçek Tarayıcı Emülasyonu",
+        "description": "Cloudflare korumalarını ve bot tespitlerini başarıyla atlatmak için insan davranışını taklit eden 'puppeteer-real-browser' kullanır."
+      },
+      "scheduling": {
+        "title": "Akıllı Zamanlama",
+        "description": "Konu durumlarını otomatik olarak izler ve konuları yalnızca 'Up' butonu aktif olduğunda öne çıkarır."
+      },
+      "session": {
+        "title": "Oturum Sürekliliği",
+        "description": "Çerezleri ve oturumları güvenli bir şekilde yönetir, giriş işlemlerini yapar ve oturum sona erdiğinde otomatik olarak yeniler."
+      },
+      "dashboard": {
+        "title": "Merkezi Kontrol Paneli",
+        "description": "Konu eklemek, ayarları yapılandırmak ve botun eylemlerinin anlık ekran görüntülerini görüntülemek için web tabanlı bir arayüz sağlar."
+      }
+    },
+    "workflow": {
+      "title": "Otomasyon İş Akışı",
+      "scanning": {
+        "title": "Tarama ve Tespit",
+        "description": "Aktif konuları ve mevcut 'Up' durumlarını DOM analizi kullanarak belirlemek için kontrol panelini periyodik olarak tarar."
+      },
+      "execution": {
+        "title": "Eylem Yürütme",
+        "description": "Öne çıkarma butonlarına hassas tıklama eylemleri gerçekleştirir ve ekran görüntüsü günlüğü aracılığıyla başarıyı doğrular."
+      }
+    },
+    "tech": {
+      "description": "Web otomasyonunda güvenilirlik ve gizliliğe odaklanarak geliştirilmiştir.",
+      "runtime": "Çekirdek ve Çalışma Zamanı",
+      "data": "Veri ve Backend",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Otomasyon mantığını ve sunucusunu yürüten çalışma zamanı ortamı."
+        },
+        "puppeteer": {
+          "name": "Puppeteer",
+          "description": "Tarayıcıyı kontrol etmek ve forum sayfalarıyla etkileşim kurmak için kullanılan Headless Chrome API."
+        },
+        "mysql": {
+          "name": "MySQL",
+          "description": "Konu listelerini, ayarları ve oturum çerezlerini depolamak için ilişkisel veritabanı."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "Kontrol paneli kullanıcı arayüzünü sunar ve bot kontrol paneli için API isteklerini işler."
+        }
+      }
+    }
+  },
+  "StrapiCms": {
+    "hero": {
+      "title": "Esnek İçerik Yönetimi.",
+      "description": "Tanıtım sayfası projeleri için tasarlanmış, son derece özelleştirilmiş bir Strapi CMS çekirdeği. Dinamik bileşen oluşturucular ve yerelleştirilmiş içerik desteği sunar."
+    },
+    "features": {
+      "title": "Temel Özellikler",
+      "dynamic": {
+        "title": "Dinamik Sayfa Oluşturma",
+        "description": "Esnek, blok tabanlı sayfa düzenleri oluşturmak için Strapi'nin Dinamik Bölgelerini kullanır."
+      },
+      "media": {
+        "title": "Medya Optimizasyonu",
+        "description": "Hızlı yüklenen varlıklar için otomatik görüntü yeniden boyutlandırma, format dönüştürme (WebP) ve optimizasyon süreci."
+      },
+      "seo": {
+        "title": "SEO Hazır",
+        "description": "Meta etiketler, Open Graph verileri ve yapılandırılmış veri şeması alanlarını içeren önceden yapılandırılmış SEO yapıları."
+      },
+      "types": {
+        "title": "Tip Oluşturma",
+        "description": "Otomatik TypeScript arayüzü oluşturma, frontend kodunuzun içerik şemalarınızla mükemmel uyum içinde kalmasını sağlar."
+      }
+    },
+    "workflow": {
+      "title": "Geliştirme İş Akışı",
+      "modeling": {
+        "title": "İçerik Modelleme",
+        "description": "Sezgisel Studio içerik oluşturucusunu kullanarak veri yapılarınızı tanımlayın. Tutarlı tasarım sistemleri için yeniden kullanılabilir bileşenler oluşturun."
+      },
+      "api": {
+        "title": "API Kullanımı",
+        "description": "İçeriğinizi, yerleşik filtreleme ve sıralama özelliklerine sahip otomatik oluşturulmuş REST veya GraphQL uç noktaları aracılığıyla tüketin."
+      }
+    },
+    "tech": {
+      "description": "Ölçeklenebilirlik ve bakım kolaylığı için endüstri standardı teknolojiler üzerine inşa edilmiştir.",
+      "platform": "Ana Platform",
+      "infrastructure": "Altyapı",
+      "items": {
+        "strapi": {
+          "name": "Strapi CMS",
+          "description": "Lider açık kaynaklı headless CMS. Özelleştirilebilir, güvenli ve geliştirici öncelikli."
+        },
+        "nodejs": {
+          "name": "Node.js",
+          "description": "CMS backend mantığını ve eklentilerini çalıştıran güvenilir javascript çalışma zamanı."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Daha iyi geliştirici deneyimi ve daha az çalışma zamanı hatası için tamamen tiplendirilmiş kod tabanı."
+        },
+        "postgres": {
+          "name": "PostgreSQL",
+          "description": "Güvenli ve güvenilir içerik depolama için sağlam ilişkisel veritabanı."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Tutarlı geliştirme ve üretim ortamları için konteynerleştirilmiş kurulum."
+        }
+      }
+    }
+  },
+  "TelegramBotManager": {
+    "hero": {
+      "title": "Gelişmiş Çoklu Bot Yönetimi.",
+      "description": "Birden fazla Telegram botunu aynı anda yayına almak, yapılandırmak ve izlemek için kapsamlı bir yönetim sistemi."
+    },
+    "features": {
+      "title": "Temel Özellikler",
+      "multiBot": {
+        "title": "Çoklu Bot Mimarisi",
+        "description": "Sınırsız sayıda botu destekleyen ölçeklenebilir mimari."
+      },
+      "triggers": {
+        "title": "Gelişmiş Tetikleme Sistemi",
+        "description": "Anahtar kelimeler ve medya dahil 15'ten fazla tetikleyici türünü destekler."
+      },
+      "actionEngine": {
+        "title": "Dinamik Eylem Motoru",
+        "description": "Kullanıcıları yasaklama, izinleri kısıtlama veya harici API'leri çağırma gibi 20'den fazla farklı eylemi yürütün."
+      },
+      "realtime": {
+        "title": "Gerçek Zamanlı Güncellemeler",
+        "description": "Supabase Realtime kullanarak tüm bot örnekleri genelinde bot yapılandırmalarının ve komutlarının sorunsuz senkronizasyonu."
+      }
+    },
+    "workflow": {
+      "title": "Sistem Bileşenleri",
+      "core": {
+        "title": "Bot Yöneticisi Çekirdeği",
+        "description": "Bot yaşam döngülerini başlatan ve yöneten, güvenli kapatma ve hata giderme işlemlerini üstlenen merkezi servis."
+      },
+      "processor": {
+        "title": "Komut İşlemci",
+        "description": "Gelen mesajları tetikleyicilerle eşleştirmek ve ilgili eylem hatlarını yürütmek için bir ara katman zinciri üzerinden verimli bir şekilde yönlendirir."
+      }
+    },
+    "tech": {
+      "description": "Güvenilirlik, tip güvenliği ve dağıtım kolaylığı için modern teknolojilerle üretilmiştir.",
+      "core": "Çekirdek ve Dil",
+      "infrastructure": "Altyapı ve Veri",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Bot mantığını çalıştıran yüksek performanslı JavaScript çalışma zamanı."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Kod tabanı genelinde statik yazım ve gelişmiş geliştirici deneyimi sağlar."
+        },
+        "telegraf": {
+          "name": "Telegraf",
+          "description": "Node.js için modern Telegram Bot Framework."
+        },
+        "supabase": {
+          "name": "Supabase",
+          "description": "Anında yapılandırma güncellemeleri için gerçek zamanlı özelliklere sahip PostgreSQL veritabanı."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Geliştirme ve üretim ortamları arasında tutarlılık sağlayan konteynerleştirilmiş dağıtım."
+        }
+      }
+    }
+  },
+  "HomePage": {
+    "title": "Ertuğrulcan Bakas - Portfolyo"
+  },
+  "Tags": {
+    "automation": "Otomasyon",
+    "strategy": "Strateji",
+    "multiplayer": "Çok Oyunculu",
+    "puzzle": "Bulmaca",
+    "integration": "Entegrasyon",
+    "backend": "Backend",
+    "nextjs": "Next.js 16",
+    "tailwind": "Tailwind CSS",
+    "gsap": "GSAP",
+    "framer": "Framer Motion",
+    "typescript": "TypeScript",
+    "nodejs": "Node.js",
+    "telegraf": "Telegraf",
+    "supabase": "Supabase",
+    "docker": "Docker",
+    "puppeteer": "Puppeteer",
+    "mysql": "MySQL",
+    "strapi": "Strapi",
+    "cms": "CMS",
+    "headless": "Headless"
+  }
+}

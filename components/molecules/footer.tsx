@@ -1,12 +1,13 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import { calComIcon } from "../icons/";
 import { Button } from "../ui/button";
 import Title from "./title";
 import { Card } from "../ui/card";
+import { useTranslations } from "next-intl";
 
 type Social = {
-  title: string;
+  key: string;
   icon: React.ElementType;
   link: {
     href: string;
@@ -16,7 +17,7 @@ type Social = {
 
 const socials: Social[] = [
   {
-    title: "GitHub",
+    key: "GitHub",
     icon: GitHubLogoIcon,
     link: {
       href: "https://github.com/ecbakas",
@@ -24,7 +25,7 @@ const socials: Social[] = [
     },
   },
   {
-    title: "Calcom",
+    key: "Calcom",
     icon: calComIcon,
     link: {
       href: "https://cal.com/ertugrulcan",
@@ -33,7 +34,7 @@ const socials: Social[] = [
   },
 
   {
-    title: "LinkedIn",
+    key: "LinkedIn",
     icon: LinkedInLogoIcon,
     link: {
       href: "https://www.linkedin.com/in/ecbakas/",
@@ -43,11 +44,12 @@ const socials: Social[] = [
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer className="space-y-2">
       <Card className="p-4 shadow-none">
         <Title
-          title="Follow me"
+          title={t("followMe")}
           className="flex w-full items-center justify-between rounded-lg"
         >
           <div className="flex gap-2">
@@ -56,13 +58,14 @@ export default function Footer() {
                 asChild
                 variant={"outline"}
                 size={"icon"}
-                key={social.title}
+                key={social.key}
               >
                 <Link
-                  key={social.title}
+                  key={social.key}
                   href={social.link.href}
                   target={social.link.target}
                   className="group"
+                  title={social.key}
                 >
                   <social.icon className="h-6 w-6" />
                 </Link>
@@ -73,26 +76,9 @@ export default function Footer() {
       </Card>
       <Card className="flex min-h-24 w-full items-center justify-center p-4 text-center shadow-none">
         <p className="text-muted-foreground dark:text-white">
-          © 2026 Ertugrulcan Bakas
+          {t("copyright")}
         </p>
       </Card>
     </footer>
   );
 }
-
-// {
-//   title: "Instagram",
-//   icon: InstagramLogoIcon,
-//   link: {
-//     href: "https://instagram.com/ecbakas",
-//     target: "_blank",
-//   },
-// },
-// {
-//   title: "Twitter",
-//   icon: xIcon,
-//   link: {
-//     href: "https://twitter.com/ecbakas",
-//     target: "_blank",
-//   },
-// },

@@ -1,5 +1,5 @@
 import { ArrowLeft, ArrowRight, Building2, Film, LayoutTemplate, Move, Palette, Star, Users } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 
 import Title from "@/components/molecules/title";
 import { Badge } from "@/components/ui/badge";
@@ -14,108 +14,113 @@ import { TailwindCSS } from "@/components/icons/tailwind";
 import { TypeScript } from "@/components/icons/typescript";
 import HighlightCart from "@/components/molecules/highlight-cart";
 import TechStack from "@/components/molecules/tech-stack";
-
-const PageData = {
-    header: {
-        title: "Padu Insaat",
-        backLabel: "Back to Home",
-    },
-    hero: {
-        title: "Modern Construction Excellence.",
-        description: "A premium landing page for Padu Insaat, a construction company with 14 years of experience. The site features advanced GSAP animations, a filterable project gallery, and a high-performance responsive design.",
-        tags: ["Next.js 16", "Tailwind CSS", "GSAP", "Framer Motion"],
-    },
-    features: {
-        title: "Key Highlights",
-        list: [
-            {
-                title: "Advanced Animations",
-                description: "Immersive scrolling experiences and entrance animations powered by GSAP and Framer Motion.",
-                icon: Film,
-            },
-            {
-                title: "Project Gallery",
-                description: "Dynamic filtering system allowing users to browse projects by category (Residential, Commercial, Renovation).",
-                icon: LayoutTemplate,
-            },
-            {
-                title: "14 Years of Expertise",
-                description: "Showcasing the company's long-standing history and commitment to quality and trust.",
-                icon: Star,
-            },
-            {
-                title: "Customer Centric",
-                description: "Dedicated sections for customer testimonials and detailed service descriptions.",
-                icon: Users,
-            }
-        ]
-    },
-    workflow: {
-        title: "Site Structure",
-        list: [
-            {
-                title: "Hero Slider",
-                description: "High-impact visual slider demonstrating core value propositions.",
-                icon: Move,
-            },
-            {
-                title: "Services & Projects",
-                description: "Clean, grid-based layouts to present services and portfolio items effectively.",
-                icon: Building2,
-            }
-        ]
-    },
-    techStack: {
-        title: "Tech Stack",
-        description: "Built with the latest web technologies for speed, SEO, and user experience.",
-        categories: [
-            {
-                name: "Framework & Core",
-                icon: LayoutTemplate,
-                items: [
-                    {
-                        name: "Next.js 16",
-                        description: "The React framework for the web, utilizing the latest App Router features.",
-                        icon: NextjsIcon,
-                    },
-                    {
-                        name: "React 19",
-                        description: "Leveraging the latest React features for concurrent rendering and server components.",
-                        icon: ReactIcon,
-                    },
-                    {
-                        name: "TypeScript",
-                        description: "Ensuring type safety and code maintainability throughout the project.",
-                        icon: TypeScript,
-                    },
-                ]
-            },
-            {
-                name: "Styling & Animation",
-                icon: Palette,
-                items: [
-                    {
-                        name: "Tailwind CSS v4",
-                        description: "Utility-first CSS framework for rapid and modern UI development.",
-                        icon: TailwindCSS,
-                    },
-                    {
-                        name: "GSAP",
-                        description: "Professional-grade JavaScript animation library for complex timelines.",
-                        icon: GSAP,
-                    },
-                    {
-                        name: "Framer Motion",
-                        description: "Production-ready motion library for React components.",
-                        icon: FramerIcon,
-                    },
-                ]
-            }
-        ]
-    }
-};
+import { useTranslations } from "next-intl";
 
 export default function PaduInsaatPage() {
+    const t = useTranslations("PaduInsaat");
+    const commonT = useTranslations("ProjectPage");
+    const projectsT = useTranslations("Projects.items");
+    const tagsT = useTranslations("Tags");
+
+    const PageData = {
+        header: {
+            title: projectsT("paduInsaat.title"),
+            backLabel: commonT("backLabel"),
+        },
+        hero: {
+            title: t("hero.title"),
+            description: t("hero.description"),
+            tags: [tagsT("nextjs"), tagsT("tailwind"), tagsT("gsap"), tagsT("framer")],
+        },
+        features: {
+            title: t("features.title"),
+            list: [
+                {
+                    title: t("features.list.animations.title"),
+                    description: t("features.list.animations.description"),
+                    icon: Film,
+                },
+                {
+                    title: t("features.list.gallery.title"),
+                    description: t("features.list.gallery.description"),
+                    icon: LayoutTemplate,
+                },
+                {
+                    title: t("features.list.expertise.title"),
+                    description: t("features.list.expertise.description"),
+                    icon: Star,
+                },
+                {
+                    title: t("features.list.customer.title"),
+                    description: t("features.list.customer.description"),
+                    icon: Users,
+                }
+            ]
+        },
+        workflow: {
+            title: t("workflow.title"),
+            list: [
+                {
+                    title: t("workflow.list.hero.title"),
+                    description: t("workflow.list.hero.description"),
+                    icon: Move,
+                },
+                {
+                    title: t("workflow.list.services.title"),
+                    description: t("workflow.list.services.description"),
+                    icon: Building2,
+                }
+            ]
+        },
+        techStack: {
+            title: commonT("techStackTitle"),
+            description: t("tech.description"),
+            categories: [
+                {
+                    name: t("tech.platform"),
+                    icon: LayoutTemplate,
+                    items: [
+                        {
+                            name: t("tech.items.nextjs.name"),
+                            description: t("tech.items.nextjs.description"),
+                            icon: NextjsIcon,
+                        },
+                        {
+                            name: t("tech.items.react.name"),
+                            description: t("tech.items.react.description"),
+                            icon: ReactIcon,
+                        },
+                        {
+                            name: t("tech.items.typescript.name"),
+                            description: t("tech.items.typescript.description"),
+                            icon: TypeScript,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.styling"),
+                    icon: Palette,
+                    items: [
+                        {
+                            name: t("tech.items.tailwind.name"),
+                            description: t("tech.items.tailwind.description"),
+                            icon: TailwindCSS,
+                        },
+                        {
+                            name: t("tech.items.gsap.name"),
+                            description: t("tech.items.gsap.description"),
+                            icon: GSAP,
+                        },
+                        {
+                            name: t("tech.items.framer.name"),
+                            description: t("tech.items.framer.description"),
+                            icon: FramerIcon,
+                        },
+                    ]
+                }
+            ]
+        }
+    };
     return (
         <div className="flex flex-col gap-2 pb-12">
             {/* Header / Navigation */}
@@ -189,13 +194,13 @@ export default function PaduInsaatPage() {
 
             {/* CTA */}
             <section className="rounded-xl border bg-muted/40 p-8 text-center space-y-4">
-                <h2 className="text-2xl font-semibold">Ready to build something great?</h2>
+                <h2 className="text-2xl font-semibold">{commonT("cta.ready")}</h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                    From modern landing pages to complex web applications, I help bring your vision to life.
+                    {commonT("cta.description")}
                 </p>
                 <div className="pt-2">
                     <Link href="/contact" className={buttonVariants({ size: "lg" })}>
-                        Get in Touch <ArrowRight className="h-4 w-4" />
+                        {commonT("cta.button")} <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
             </section>

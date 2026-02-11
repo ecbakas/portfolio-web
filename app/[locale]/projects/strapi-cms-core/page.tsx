@@ -14,103 +14,108 @@ import { TypeScript } from "@/components/icons/typescript";
 import HighlightCart from "@/components/molecules/highlight-cart";
 import TechStack from "@/components/molecules/tech-stack";
 import { Strapi } from "@/components/icons/strapi";
-
-const PageData = {
-    header: {
-        title: "CMS Strapi Core",
-        backLabel: "Back to Home",
-    },
-    hero: {
-        title: "The Ultimate Headless CMS Starter.",
-        description: "A production-ready, pre-configured Strapi template designed for rapid landing page development. This core acts as a centralized content hub that can power any frontend with a flexible and robust API.",
-        tags: ["CMS", "Headless", "Strapi", "Backend"],
-    },
-    features: {
-        title: "Core Features",
-        list: [
-            {
-                title: "Dynamic Page Building",
-                description: "Utilizes Strapi's Dynamic Zones to create flexible, block-based page layouts that can be rearranged on the fly.",
-                icon: Blocks,
-            },
-            {
-                title: "Media Optimization",
-                description: "Automatic image resizing, format conversion (WebP), and optimization pipeline for fast-loading assets.",
-                icon: Zap,
-            },
-            {
-                title: "SEO Ready",
-                description: "Pre-configured SEO structures including meta tags, Open Graph data, and structured data schema fields.",
-                icon: Globe,
-            },
-            {
-                title: "Type Generation",
-                description: "Automated TypeScript interface generation ensures your frontend code stays in perfect sync with your content schemas.",
-                icon: Code2,
-            }
-        ]
-    },
-    workflow: {
-        title: "Development Workflow",
-        list: [
-            {
-                title: "Content Modeling",
-                description: "Define your data structures using the intuitive Studio content builder. Create reusable components for consistent design systems.",
-                icon: Layout,
-            },
-            {
-                title: "API Consumption",
-                description: "Consume your content via auto-generated REST or GraphQL endpoints with built-in filtering, sorting, and pagination.",
-                icon: Server,
-            }
-        ]
-    },
-    techStack: {
-        title: "Tech Stack",
-        description: "Built on industry-standard technologies for scalability and ease of maintenance.",
-        categories: [
-            {
-                name: "Core Platform",
-                icon: Database,
-                items: [
-                    {
-                        name: "Strapi CMS",
-                        description: "The leading open-source headless CMS. Customizable, secure, and developer-first.",
-                        icon: Strapi,
-                    },
-                    {
-                        name: "Node.js",
-                        description: "Reliable javascript runtime powering the CMS backend logic and plugins.",
-                        icon: Nodejs,
-                    },
-                    {
-                        name: "TypeScript",
-                        description: "Fully typed codebase for better developer experience and reduced runtime errors.",
-                        icon: TypeScript,
-                    },
-                ]
-            },
-            {
-                name: "Infrastructure",
-                icon: Server,
-                items: [
-                    {
-                        name: "PostgreSQL",
-                        description: "Robust relational database for secure and reliable content storage.",
-                        icon: PostgreSQL,
-                    },
-                    {
-                        name: "Docker",
-                        description: "Containerized setup for consistent development and production environments.",
-                        icon: Docker,
-                    },
-                ]
-            }
-        ]
-    }
-};
+import { useTranslations } from "next-intl";
 
 export default function CmsStrapiCorePage() {
+    const t = useTranslations("StrapiCms");
+    const commonT = useTranslations("ProjectPage");
+    const tagsT = useTranslations("Tags");
+    const projectsT = useTranslations("Projects.items");
+
+    const PageData = {
+        header: {
+            title: projectsT("strapiCmsCore.title"),
+            backLabel: commonT("backLabel"),
+        },
+        hero: {
+            title: t("hero.title"),
+            description: t("hero.description"),
+            tags: [tagsT("cms"), tagsT("headless"), tagsT("strapi"), tagsT("backend")],
+        },
+        features: {
+            title: t("features.title"),
+            list: [
+                {
+                    title: t("features.dynamic.title"),
+                    description: t("features.dynamic.description"),
+                    icon: Blocks,
+                },
+                {
+                    title: t("features.media.title"),
+                    description: t("features.media.description"),
+                    icon: Zap,
+                },
+                {
+                    title: t("features.seo.title"),
+                    description: t("features.seo.description"),
+                    icon: Globe,
+                },
+                {
+                    title: t("features.types.title"),
+                    description: t("features.types.description"),
+                    icon: Code2,
+                }
+            ]
+        },
+        workflow: {
+            title: t("workflow.title"),
+            list: [
+                {
+                    title: t("workflow.modeling.title"),
+                    description: t("workflow.modeling.description"),
+                    icon: Layout,
+                },
+                {
+                    title: t("workflow.api.title"),
+                    description: t("workflow.api.description"),
+                    icon: Server,
+                }
+            ]
+        },
+        techStack: {
+            title: commonT("techStackTitle"),
+            description: t("tech.description"),
+            categories: [
+                {
+                    name: t("tech.platform"),
+                    icon: Database,
+                    items: [
+                        {
+                            name: t("tech.items.strapi.name"),
+                            description: t("tech.items.strapi.description"),
+                            icon: Strapi,
+                        },
+                        {
+                            name: t("tech.items.nodejs.name"),
+                            description: t("tech.items.nodejs.description"),
+                            icon: Nodejs,
+                        },
+                        {
+                            name: t("tech.items.typescript.name"),
+                            description: t("tech.items.typescript.description"),
+                            icon: TypeScript,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.infrastructure"),
+                    icon: Server,
+                    items: [
+                        {
+                            name: t("tech.items.postgres.name"),
+                            description: t("tech.items.postgres.description"),
+                            icon: PostgreSQL,
+                        },
+                        {
+                            name: t("tech.items.docker.name"),
+                            description: t("tech.items.docker.description"),
+                            icon: Docker,
+                        },
+                    ]
+                }
+            ]
+        }
+    };
     return (
         <div className="flex flex-col gap-2 pb-12">
             {/* Header / Navigation */}
@@ -133,7 +138,9 @@ export default function CmsStrapiCorePage() {
                     </p>
                     <div className="flex gap-2">
                         {PageData.hero.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary">{tag}</Badge>
+                            <Badge key={tag} variant="secondary">
+                                {tagsT.has(tag.toLowerCase()) ? tagsT(tag.toLowerCase()) : tag}
+                            </Badge>
                         ))}
                     </div>
                 </div>
@@ -184,13 +191,13 @@ export default function CmsStrapiCorePage() {
 
             {/* CTA */}
             <section className="rounded-xl border bg-muted/40 p-8 text-center space-y-4">
-                <h2 className="text-2xl font-semibold">Start Building</h2>
+                <h2 className="text-2xl font-semibold">{commonT("cta.ready")}</h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                    Get up and running with a production-grade CMS in minutes. Perfect for agencies and freelance developers.
+                    {commonT("cta.description")}
                 </p>
                 <div className="pt-2">
                     <Link href="/contact" className={buttonVariants({ size: "lg" })}>
-                        Request Template <ArrowRight className="h-4 w-4" />
+                        {commonT("cta.button")} <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
             </section>

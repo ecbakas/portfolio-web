@@ -34,225 +34,230 @@ import { Supabase } from "@/components/icons/supabase";
 import { TypeScript } from "@/components/icons/typescript";
 import { Zustand } from "@/components/icons/zustand";
 import TechStack from "@/components/molecules/tech-stack";
+import { useTranslations } from "next-intl";
 
-const PageData = {
-    header: {
-        title: "Rune Rivals",
-        backLabel: "Back to Home",
-    },
-    hero: {
-        title: "Master the Grid. Claim the Elements.",
-        description: "Rune Rivals is a strategic turn-based game played on a 6x6 grid. Capture tiles, solve puzzles, and use powerful items to dominate your opponents. Choose your element Fire, Water, Earth, or Air and battle for supremacy.",
-        tags: ["Strategy", "Multiplayer", "Puzzle"],
-        placeholderText: "Gameplay Placeholder",
-        splashImage: splash,
-    },
-    roomOptions: {
-        title: "Room Customization",
-        categories: {
-            title: "Categories",
-            value: "5 Types",
-            description: "Math, Reflex, Memory, Word, Mixed",
+export default function RuneRivalsPage() {
+    const t = useTranslations("RuneRivals");
+    const commonT = useTranslations("ProjectPage");
+    const tagsT = useTranslations("Tags");
+    const projectsT = useTranslations("Projects.items");
+
+    const PageData = {
+        header: {
+            title: projectsT("runeRivals.title"),
+            backLabel: commonT("backLabel"),
         },
-        turnTime: {
-            title: "Turn Time",
-            value: "Variable",
-            description: "15s, 30s, or 60s per turn",
+        hero: {
+            title: t("hero.title"),
+            description: t("hero.description"),
+            tags: [tagsT("strategy"), tagsT("multiplayer"), tagsT("puzzle")],
+            placeholderText: "Gameplay Placeholder",
+            splashImage: splash,
         },
-        players: {
-            title: "Players",
-            value: "2 or 4",
-            description: "Head-to-head or free-for-all",
+        roomOptions: {
+            title: t("roomOptions.title"),
+            categories: {
+                title: t("roomOptions.categories.title"),
+                value: t("roomOptions.categories.value"),
+                description: t("roomOptions.categories.description"),
+            },
+            turnTime: {
+                title: t("roomOptions.turnTime.title"),
+                value: t("roomOptions.turnTime.value"),
+                description: t("roomOptions.turnTime.description"),
+            },
+            players: {
+                title: t("roomOptions.players.title"),
+                value: t("roomOptions.players.value"),
+                description: t("roomOptions.players.description"),
+            },
+            bots: {
+                title: t("roomOptions.bots.title"),
+                value: t("roomOptions.bots.value"),
+                description: t("roomOptions.bots.description"),
+            },
         },
-        bots: {
-            title: "Bots",
-            value: "AI Support",
-            description: "Add bots to fill empty slots",
+        gameLogic: {
+            title: t("gameLogic.title"),
+            mechanics: {
+                title: t("gameLogic.mechanics.title"),
+                gridDescription: t("gameLogic.mechanics.grid"),
+                captureDescription: t("gameLogic.mechanics.capture"),
+                jumpDescription: t("gameLogic.mechanics.jump"),
+                note: t("gameLogic.mechanics.note"),
+            },
+            scoring: {
+                title: t("gameLogic.scoring.title"),
+                points: [
+                    { label: t("gameLogic.scoring.corners"), value: `5 ${t("gameLogic.scoring.pts")}` },
+                    { label: t("gameLogic.scoring.borders"), value: `8 ${t("gameLogic.scoring.pts")}` },
+                    { label: t("gameLogic.scoring.inner"), value: `12 ${t("gameLogic.scoring.pts")}` },
+                ],
+                summary: t("gameLogic.scoring.summary"),
+            },
         },
-    },
-    gameLogic: {
-        title: "How to Play",
-        mechanics: {
-            title: "Core Mechanics",
-            gridDescription: "The game is played on a 6x6 grid. Each player controls an element (Fire, Water, Earth, Air).",
-            captureDescription: "Every turn, you capture a tile by solving a question based on the room's category.",
-            jumpDescription: "If your selected tile \"jumps\" over an enemy tile (passing an enemy tile between your new tile and an existing one), you attempt to capture both the empty tile and the enemy's tile.",
-            note: "Note: Capturing enemy tiles makes the question harder!",
-        },
-        scoring: {
-            title: "Scoring & Winning",
-            points: [
-                { label: "Corners:", value: "5 points" },
-                { label: "Borders:", value: "8 points" },
-                { label: "Inner Tiles:", value: "12 points" },
+        items: {
+            title: t("items.title"),
+            modeLabel: t("items.modeLabel"),
+            list: [
+                {
+                    title: t("items.names.shield"),
+                    details: t("items.shield"),
+                    image: shield,
+                },
+                {
+                    title: t("items.names.trap"),
+                    details: t("items.trap"),
+                    image: trap,
+                },
+                {
+                    title: t("items.names.strike"),
+                    details: t("items.strike"),
+                    image: strike,
+                },
+                {
+                    title: t("items.names.phoenix"),
+                    details: t("items.phoenix"),
+                    image: phoenix,
+                },
             ],
-            summary: "Points are used to buy powerful items if \"Item Mode\" is enabled. The player with the most tiles/points at the end wins!",
         },
-    },
-    items: {
-        title: "Power-Ups & Items",
-        modeLabel: "Item Mode: ON/OFF",
-        list: [
-            {
-                title: "Shield",
-                details: "Apply to your own tiles to protect them from being swapped or captured by enemies. Visible to all players.",
-                image: shield,
-            },
-            {
-                title: "Trap",
-                details: "Place on empty tiles. Invisible to enemies! If they select it, their points are reduced by 50.",
-                image: trap,
-            },
-            {
-                title: "Strike",
-                details: "Attack an enemy tile directly to neutralize their control without needing to capture a surrounding tile.",
-                image: strike,
-            },
-            {
-                title: "Phoenix",
-                details: "Must be used before solving. Grants a second chance (new question) if you answer incorrectly.",
-                image: phoenix,
-            },
-        ],
-    },
-    gallery: {
-        title: "Gallery",
-        images: [
-            {
-                src: screenshotEntry,
-                alt: "Rune Rivals Entry Screen"
-            },
-            {
-                src: screenshotCreate,
-                alt: "Rune Rivals Create Game Screen"
-            },
-            {
-                src: screenshotLobby,
-                alt: "Rune Rivals Game Lobby"
-            },
-            {
-                src: screenshotIngame1,
-                alt: "Rune Rivals In-Game Action"
-            },
-            {
-                src: screenshotIngame2,
-                alt: "Rune Rivals In-Game Strategy"
-            },
-        ]
-    },
-    techStack: {
-        title: "Tech Stack",
-        description: "The modern technologies and tools used to build and design Rune Rivals.",
-        categories: [
-            {
-                name: "Mobile (Frontend)",
-                icon: Smartphone,
-                items: [
-                    {
-                        name: "React Native (Expo)",
-                        description: "Provides a native performance with a single codebase for efficient cross-platform delivery.",
-                        icon: Expo,
-                    },
-                    {
-                        name: "TypeScript",
-                        description: "Ensures type safety and drastically reduces runtime errors in a complex codebase.",
-                        icon: TypeScript,
-                    },
-                    {
-                        name: "React Native Reanimated",
-                        description: "Enables silky smooth 60fps animations essential for game feel.",
-                        icon: Layers,
-                    },
-                    {
-                        name: "Socket.IO Client",
-                        description: "Low-latency connection required for real-time multiplayer synchronization.",
-                        icon: SocketIO,
-                    },
-                    {
-                        name: "Zustand",
-                        description: "Minimalistic state management to handle rapid game state updates without re-render lag.",
-                        icon: Zustand,
-                    },
-                ]
-            },
-            {
-                name: "Backend (Game Server)",
-                icon: Server,
-                items: [
-                    {
-                        name: "Node.js",
-                        description: "Leverages the same language as the frontend for shared types and logic.",
-                        icon: Nodejs,
-                    },
-                    {
-                        name: "Express.js",
-                        description: "Simple and robust routing for API endpoints and middleware handling.",
-                        icon: Expressjs,
-                    },
-                    {
-                        name: "Socket.IO",
-                        description: "Handles room management and event-driven gameplay logic reliably.",
-                        icon: SocketIO,
-                    },
-                    {
-                        name: "TypeScript",
-                        description: "Strict typing across the backend prevents critical logic errors during gameplay.",
-                        icon: TypeScript,
-                    },
-                ]
-            },
-            {
-                name: "Infrastructure & DevOps",
-                icon: Cloud,
-                items: [
-                    {
-                        name: "Supabase Self-Hosted",
-                        description: "Instantly provides a production-ready database and authentication system.",
-                        icon: Supabase,
-                    },
-                    {
-                        name: "Docker",
-                        description: "Guarantees the game server runs identically in development and production.",
-                        icon: Docker,
-                    },
-                    {
-                        name: "Coolify",
-                        description: "Simplifies self-hosting the game server with automatic deployments.",
-                        icon: Coolify,
-                    },
-                    {
-                        name: "EAS Build",
-                        description: "Offloads complex native builds to the cloud for faster iteration.",
-                        icon: Cloud,
-                    },
-                ]
-            },
-            {
-                name: "Design & Creative",
-                icon: Palette,
-                items: [
-                    {
-                        name: "Figma",
-                        description: "Rapid prototyping of game UI and user flows.",
-                        icon: Figma,
-                    },
-                    {
-                        name: "Photoshop",
-                        description: "Creation and editing of game assets.",
-                        icon: Photoshop,
-                    },
-                    {
-                        name: "Gemini",
-                        description: "For creating game assets.",
-                        icon: Gemini,
-                    },
-                ]
-            }
-        ]
-    }
-};
-
-export default function Page() {
+        gallery: {
+            title: t("gallery.title"),
+            images: [
+                {
+                    src: screenshotEntry,
+                    alt: t("gallery.entry")
+                },
+                {
+                    src: screenshotCreate,
+                    alt: t("gallery.create")
+                },
+                {
+                    src: screenshotLobby,
+                    alt: t("gallery.lobby")
+                },
+                {
+                    src: screenshotIngame1,
+                    alt: t("gallery.action")
+                },
+                {
+                    src: screenshotIngame2,
+                    alt: t("gallery.strategy")
+                },
+            ]
+        },
+        techStack: {
+            title: commonT("techStackTitle"),
+            description: t("tech.description"),
+            categories: [
+                {
+                    name: t("tech.mobile"),
+                    icon: Smartphone,
+                    items: [
+                        {
+                            name: t("tech.items.expo.name"),
+                            description: t("tech.items.expo.description"),
+                            icon: Expo,
+                        },
+                        {
+                            name: t("tech.items.typescript.name"),
+                            description: t("tech.items.typescript.description"),
+                            icon: TypeScript,
+                        },
+                        {
+                            name: t("tech.items.reanimated.name"),
+                            description: t("tech.items.reanimated.description"),
+                            icon: Layers,
+                        },
+                        {
+                            name: t("tech.items.socketio_client.name"),
+                            description: t("tech.items.socketio_client.description"),
+                            icon: SocketIO,
+                        },
+                        {
+                            name: t("tech.items.zustand.name"),
+                            description: t("tech.items.zustand.description"),
+                            icon: Zustand,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.backend"),
+                    icon: Server,
+                    items: [
+                        {
+                            name: t("tech.items.nodejs.name"),
+                            description: t("tech.items.nodejs.description"),
+                            icon: Nodejs,
+                        },
+                        {
+                            name: t("tech.items.express.name"),
+                            description: t("tech.items.express.description"),
+                            icon: Expressjs,
+                        },
+                        {
+                            name: t("tech.items.socketio.name"),
+                            description: t("tech.items.socketio.description"),
+                            icon: SocketIO,
+                        },
+                        {
+                            name: t("tech.items.node_typescript.name"),
+                            description: t("tech.items.node_typescript.description"),
+                            icon: TypeScript,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.devops"),
+                    icon: Cloud,
+                    items: [
+                        {
+                            name: t("tech.items.supabase.name"),
+                            description: t("tech.items.supabase.description"),
+                            icon: Supabase,
+                        },
+                        {
+                            name: t("tech.items.docker.name"),
+                            description: t("tech.items.docker.description"),
+                            icon: Docker,
+                        },
+                        {
+                            name: t("tech.items.coolify.name"),
+                            description: t("tech.items.coolify.description"),
+                            icon: Coolify,
+                        },
+                        {
+                            name: t("tech.items.eas.name"),
+                            description: t("tech.items.eas.description"),
+                            icon: Cloud,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.creative"),
+                    icon: Palette,
+                    items: [
+                        {
+                            name: t("tech.items.figma.name"),
+                            description: t("tech.items.figma.description"),
+                            icon: Figma,
+                        },
+                        {
+                            name: t("tech.items.photoshop.name"),
+                            description: t("tech.items.photoshop.description"),
+                            icon: Photoshop,
+                        },
+                        {
+                            name: t("tech.items.gemini.name"),
+                            description: t("tech.items.gemini.description"),
+                            icon: Gemini,
+                        },
+                    ]
+                }
+            ]
+        }
+    };
     return (
         <div className="flex flex-col gap-4 pb-12">
             {/* Header / Navigation */}

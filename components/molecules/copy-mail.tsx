@@ -2,21 +2,23 @@
 import { Copy } from "lucide-react";
 import { Button } from "../ui/button";
 import { toast } from "@/hooks/use-toast";
+import { useTranslations } from "next-intl";
 
 export default function CopyMail() {
+  const t = useTranslations("Common");
   return (
     <Button
       variant={"outline"}
       onClick={() => {
         toast({
-          title: "Copied",
-          description: "Email address copied to clipboard.",
+          title: t("copied"),
+          description: t("emailCopiedDesc"),
         });
         navigator.clipboard.writeText("ecbakas@gmail.com");
       }}
     >
       <Copy className="mr-2 w-4" />
-      Copy Mail
+      {t("copyMail")}
     </Button>
   );
 }

@@ -1,4 +1,5 @@
 "use server";
+import { getTranslations } from "next-intl/server";
 
 import { Resend } from "resend";
 import { ContactFormSchema, ContactFormData } from "./schema";
@@ -6,10 +7,11 @@ import { ContactFormSchema, ContactFormData } from "./schema";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendContactEmail(data: ContactFormData) {
+  const t = await getTranslations("ContactPage.form.validation");
   const result = ContactFormSchema.safeParse(data);
 
   if (!result.success) {
-    return { success: false, error: "Invalid form data" };
+    return { success: false, error: t("invalidForm") };
   }
 
   const { name, email, message } = result.data;
@@ -33,7 +35,7 @@ export async function sendContactEmail(data: ContactFormData) {
     console.error("Unexpected error:", error);
     return {
       success: false,
-      error: "Something went wrong. Please try again later.",
+      error: t("unexpected"),
     };
   }
 }

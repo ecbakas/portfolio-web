@@ -1,6 +1,6 @@
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { ArrowRight, Building2, ChevronRight, ExternalLink, Globe } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/navigation";
 import React from "react";
 import { Puppeteer } from "../icons/puppeteer";
 import RuneRivals from "../icons/rune-rivals";
@@ -10,11 +10,22 @@ import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import Title from "./title";
+import { useTranslations } from "next-intl";
+
+const projectKeys = [
+  "runeRivals",
+  "birfaturaWrapper",
+  "strapiCmsCore",
+  "r10ProBot",
+  "telegramBotManager",
+  "paduInsaat",
+  "ayasofyazilimUi",
+  "schemaForm",
+];
 
 const items: SectionItem[] = [
   {
-    title: "Rune Rivals",
-    description: "A competitive grid control game.",
+    key: "runeRivals",
     icon: RuneRivals,
     tags: ["React Native", "TypeScript", "Expo", "Node.js", "Socket.io"],
     link: {
@@ -23,8 +34,7 @@ const items: SectionItem[] = [
     },
   },
   {
-    title: "Birfatura Wrapper",
-    description: "A wrapper API for Birfatura API.",
+    key: "birfaturaWrapper",
     icon: Globe,
     tags: ["Node.js", "TypeScript", "Express",],
     link: {
@@ -33,8 +43,7 @@ const items: SectionItem[] = [
     },
   },
   {
-    title: "Strapi CMS Core",
-    description: "A Strapi CMS for landing projects.",
+    key: "strapiCmsCore",
     icon: Strapi,
     tags: ["Node.js", "TypeScript", "Strapi", "Next.js", "Tailwind CSS", "Shadcn UI"],
     link: {
@@ -43,18 +52,16 @@ const items: SectionItem[] = [
     },
   },
   {
-    title: "R10 Pro Bot",
-    description: "Intelligent forum automation & bumping tool.",
+    key: "r10ProBot",
     icon: Puppeteer,
-    tags: ["Node.js", "Puppeteer", "MySQL", "Automation"],
+    tags: ["Node.js", "Puppeteer", "MySQL", "automation"],
     link: {
       href: "/projects/r10-up",
       target: "_self",
     },
   },
   {
-    title: "Telegram Bot Manager",
-    description: "Advanced multi-bot management system.",
+    key: "telegramBotManager",
     icon: Telegraf,
     tags: ["Node.js", "Supabase", "Telegraf", "Docker"],
     link: {
@@ -63,8 +70,7 @@ const items: SectionItem[] = [
     },
   },
   {
-    title: "Padu Insaat",
-    description: "Premium construction company landing page.",
+    key: "paduInsaat",
     icon: Building2,
     tags: ["Next.js", "Tailwind CSS", "GSAP", "Framer Motion"],
     link: {
@@ -74,8 +80,7 @@ const items: SectionItem[] = [
   },
 
   {
-    title: "Ayasofyazılım UI",
-    description: "Updating and developing AyasofyazılımUI library.",
+    key: "ayasofyazilimUi",
     icon: GitHubLogoIcon,
     tags: ["TypeScript", "React", "Tailwind CSS", "Shadcn UI"],
     link: {
@@ -84,8 +89,7 @@ const items: SectionItem[] = [
     },
   },
   {
-    title: "SchemaForm",
-    description: "Form generation from schema with JSON Schema standard.",
+    key: "schemaForm",
     icon: GitHubLogoIcon,
     tags: ["TypeScript", "React", "Tailwind CSS", "Shadcn UI"],
     link: {
@@ -95,25 +99,25 @@ const items: SectionItem[] = [
   },
 ];
 export default function Section() {
+  const t = useTranslations("Projects");
   return (
     <Card className="flex flex-col gap-2 shadow-none bg-transparent border-none p-0">
-      <Title title="Projects">
+      <Title title={t("title")}>
         <Button variant={"outline"} className="hidden">
-          View All
+          {t("viewAll")}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </Title>
       <div className="space-y-2">
         {items.map((item) => (
-          <SectionItem key={item.title} item={item} />
+          <SectionItem key={item.key} item={item} />
         ))}
       </div>
     </Card>
   );
 }
 type SectionItem = {
-  title: string;
-  description: string;
+  key: string;
   icon: React.ElementType;
   tags?: string[],
   link: {
@@ -122,6 +126,8 @@ type SectionItem = {
   };
 };
 export function SectionItem({ item }: { item: SectionItem }) {
+  const t = useTranslations("Projects.items");
+  const tagsT = useTranslations("Tags");
   return (
     <Button asChild variant={"outline"} className="w-full items-start">
       <Link
@@ -132,15 +138,15 @@ export function SectionItem({ item }: { item: SectionItem }) {
         <item.icon className="aspect-square h-12 min-w-12 min-h-12 w-12 rounded-full mb-auto" />
         <div className="w-full overflow-hidden flex flex-col gap-1">
           <div>
-            <h6 className="text-lg">{item.title}</h6>
+            <h6 className="text-lg">{t(`${item.key}.title`)}</h6>
             <p className="w-full overflow-hidden text-ellipsis text-sm text-muted-foreground">
-              {item.description}
+              {t(`${item.key}.description`)}
             </p>
           </div>
           <div className="flex gap-2 flex-wrap">
             {item.tags?.map((tag) => (
               <Badge key={tag} variant="outline">
-                {tag}
+                {tagsT.has(tag.toLowerCase()) ? tagsT(tag.toLowerCase()) : tag}
               </Badge>
             ))}
           </div>

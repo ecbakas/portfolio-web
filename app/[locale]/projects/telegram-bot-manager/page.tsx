@@ -14,103 +14,108 @@ import { Telegraf } from "@/components/icons/telegraf";
 import { TypeScript } from "@/components/icons/typescript";
 import HighlightCart from "@/components/molecules/highlight-cart";
 import TechStack from "@/components/molecules/tech-stack";
-
-const PageData = {
-    header: {
-        title: "Telegram Bot Manager",
-        backLabel: "Back to Home",
-    },
-    hero: {
-        title: "Advanced Multi-Bot Orchestration.",
-        description: "A comprehensive management system that empowers users to deploy, configure, and monitor multiple Telegram bots simultaneously. Features a powerful trigger-action engine and real-time updates via Supabase.",
-        tags: ["TypeScript", "Node.js", "Telegraf", "Supabase", "Docker"],
-    },
-    features: {
-        title: "Key Features",
-        list: [
-            {
-                title: "Multi-Bot Architecture",
-                description: "Scalable architecture supporting unlimited bots, each running in its own isolated Telegraf instance for stability and performance.",
-                icon: Boxes,
-            },
-            {
-                title: "Advanced Trigger System",
-                description: "Supports over 15 trigger types including keywords, regex patterns, media types (photo, video), and user events (join/leave).",
-                icon: Zap,
-            },
-            {
-                title: "Dynamic Action Engine",
-                description: "Execute 20+ different actions such as banning users, restricting permissions, sending media, or calling external APIs.",
-                icon: Cpu,
-            },
-            {
-                title: "Real-time Updates",
-                description: "Seamless synchronization of bot configurations and commands across all instances using Supabase Realtime.",
-                icon: RefreshCw,
-            }
-        ]
-    },
-    workflow: {
-        title: "System Components",
-        list: [
-            {
-                title: "Bot Manager Core",
-                description: "Centralized service that instantiates and manages bot lifecycles, handling graceful shutdowns and error recovery.",
-                icon: Settings,
-            },
-            {
-                title: "Command Processor",
-                description: "Efficiently routes incoming messages through a middleware chain to match triggers and execute corresponding action pipelines.",
-                icon: MessageSquare,
-            }
-        ]
-    },
-    techStack: {
-        title: "Tech Stack",
-        description: "Built with modern technologies for reliability, type safety, and ease of deployment.",
-        categories: [
-            {
-                name: "Core & Language",
-                icon: Server,
-                items: [
-                    {
-                        name: "Node.js",
-                        description: "High-performance JavaScript runtime powering the bot logic.",
-                        icon: Nodejs,
-                    },
-                    {
-                        name: "TypeScript",
-                        description: "Provides static typing and enhanced developer experience across the codebase.",
-                        icon: TypeScript,
-                    },
-                    {
-                        name: "Telegraf",
-                        description: "Modern Telegram Bot Framework for Node.js.",
-                        icon: Telegraf,
-                    },
-                ]
-            },
-            {
-                name: "Infrastructure & Data",
-                icon: Globe,
-                items: [
-                    {
-                        name: "Supabase",
-                        description: "PostgreSQL database with real-time capabilities for instant config updates.",
-                        icon: Supabase,
-                    },
-                    {
-                        name: "Docker",
-                        description: "Containerized deployment ensuring consistency across development and production environments.",
-                        icon: Docker,
-                    },
-                ]
-            }
-        ]
-    }
-};
+import { useTranslations } from "next-intl";
 
 export default function TelegramBotManagerPage() {
+    const t = useTranslations("TelegramBotManager");
+    const commonT = useTranslations("ProjectPage");
+    const projectsT = useTranslations("Projects.items");
+    const tagsT = useTranslations("Tags");
+
+    const PageData = {
+        header: {
+            title: projectsT("telegramBotManager.title"),
+            backLabel: commonT("backLabel"),
+        },
+        hero: {
+            title: t("hero.title"),
+            description: t("hero.description"),
+            tags: [tagsT("typescript"), tagsT("nodejs"), tagsT("telegraf"), tagsT("supabase"), tagsT("docker")],
+        },
+        features: {
+            title: t("features.title"),
+            list: [
+                {
+                    title: t("features.multiBot.title"),
+                    description: t("features.multiBot.description"),
+                    icon: Boxes,
+                },
+                {
+                    title: t("features.triggers.title"),
+                    description: t("features.triggers.description"),
+                    icon: Zap,
+                },
+                {
+                    title: t("features.actionEngine.title"),
+                    description: t("features.actionEngine.description"),
+                    icon: Cpu,
+                },
+                {
+                    title: t("features.realtime.title"),
+                    description: t("features.realtime.description"),
+                    icon: RefreshCw,
+                }
+            ]
+        },
+        workflow: {
+            title: t("workflow.title"),
+            list: [
+                {
+                    title: t("workflow.core.title"),
+                    description: t("workflow.core.description"),
+                    icon: Settings,
+                },
+                {
+                    title: t("workflow.processor.title"),
+                    description: t("workflow.processor.description"),
+                    icon: MessageSquare,
+                }
+            ]
+        },
+        techStack: {
+            title: commonT("techStackTitle"),
+            description: t("tech.description"),
+            categories: [
+                {
+                    name: t("tech.core"),
+                    icon: Server,
+                    items: [
+                        {
+                            name: t("tech.items.nodejs.name"),
+                            description: t("tech.items.nodejs.description"),
+                            icon: Nodejs,
+                        },
+                        {
+                            name: t("tech.items.typescript.name"),
+                            description: t("tech.items.typescript.description"),
+                            icon: TypeScript,
+                        },
+                        {
+                            name: t("tech.items.telegraf.name"),
+                            description: t("tech.items.telegraf.description"),
+                            icon: Telegraf,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.infrastructure"),
+                    icon: Globe,
+                    items: [
+                        {
+                            name: t("tech.items.supabase.name"),
+                            description: t("tech.items.supabase.description"),
+                            icon: Supabase,
+                        },
+                        {
+                            name: t("tech.items.docker.name"),
+                            description: t("tech.items.docker.description"),
+                            icon: Docker,
+                        },
+                    ]
+                }
+            ]
+        }
+    };
     return (
         <div className="flex flex-col gap-2 pb-12">
             {/* Header / Navigation */}
@@ -184,13 +189,13 @@ export default function TelegramBotManagerPage() {
 
             {/* CTA */}
             <section className="rounded-xl border bg-muted/40 p-8 text-center space-y-4">
-                <h2 className="text-2xl font-semibold">Interested in this project?</h2>
+                <h2 className="text-2xl font-semibold">{commonT("cta.interested")}</h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                    Manage your Telegram communities efficiently with automated modulation and interactive bots.
+                    {commonT("cta.description")}
                 </p>
                 <div className="pt-2">
                     <Link href="/contact" className={buttonVariants({ size: "lg" })}>
-                        Get in Touch <ArrowRight className="h-4 w-4" />
+                        {commonT("cta.button")} <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
             </section>

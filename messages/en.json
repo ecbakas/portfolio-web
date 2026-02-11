@@ -1,0 +1,621 @@
+{
+  "Metadata": {
+    "title": "Ertugrulcan Bakas - Portfolio",
+    "description": "Developed by ertugrulcan with Next.js and Tailwind CSS. Deployed with Coolify on self-hosted server."
+  },
+  "Common": {
+    "hireMe": "Hire Me",
+    "copyMail": "Copy Mail",
+    "copied": "Copied",
+    "emailCopiedDesc": "Email address copied to clipboard.",
+    "availableForWork": "Available for work",
+    "downloadResume": "Download my resume"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Footer": {
+    "followMe": "Follow me",
+    "copyright": "© 2026 Ertugrulcan Bakas"
+  },
+  "Hero": {
+    "jobTitle": "Frontend Developer",
+    "intro": "I'm Ertuğrulcan Bakas",
+    "description": "Frontend developer from Türkiye. Currently developing at Ayasofyazılım."
+  },
+  "CTA": {
+    "title": "Let’s work together.",
+    "description": "Design and develop something great."
+  },
+  "AboutPage": {
+    "title": "About",
+    "greeting": "It's me Ertuğrulcan",
+    "p1": "Hello, I’m Ertuğrulcan. While my primary focus is frontend development, I possess a deep understanding of the entire web stack, allowing me to build robust, end-to-end solutions. I graduated in Computer Programming in 2018 and have since been refining my craft across the full spectrum of software development.",
+    "p2": "My expertise goes beyond just UI. I am proficient in modern frontend technologies like React, Next.js, React Native, Expo, Shadcn UI, and Tailwind CSS, paired with design tools like Figma, Photoshop, and After Effects to create exceptional user experiences.",
+    "p3": "On the backend and infrastructure side, I work with Node.js, WebSocket, JWT, Auth.js, and databases such as PostgreSQL and MS SQL. I manage deployments using Docker, Docker Compose, Coolify, and reverse proxies like Traefik, Caddy, and Nginx. I also handle server administration with Ubuntu/Linux bash and SSH, and secure applications using Cloudflare WAF and DNS.",
+    "p4": "I ensure quality through E2E testing with Playwright and automate workflows using GitHub Actions. Currently, I am working at Ayasofyazılım, continuing to expand my knowledge and contribute to open-source projects."
+  },
+  "ContactPage": {
+    "title": "Hire me",
+    "inquiry": "Inquiry",
+    "inquiryDesc": "Do you need help or just want to say hi? Reach out now",
+    "scheduleMeeting": "Schedule a meeting on cal.com",
+    "or": "or",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "test@test.com",
+      "message": "Message",
+      "messagePlaceholder": "I'am reaching you for...",
+      "submit": "Submit",
+      "sending": "Sending...",
+      "validation": {
+        "nameMin": "Name must be at least 2 characters.",
+        "emailInvalid": "Email must be valid.",
+        "invalidForm": "Invalid form data",
+        "unexpected": "Something went wrong. Please try again later."
+      }
+    },
+    "toasts": {
+      "success": "Message sent!",
+      "successDesc": "Thank you for reaching out. I'll get back to you soon.",
+      "error": "Error sending message",
+      "errorDesc": "Please try again later.",
+      "unexpected": "Unexpected error",
+      "unexpectedDesc": "Something went wrong. Please try again later."
+    }
+  },
+  "Projects": {
+    "title": "Projects",
+    "viewAll": "View All",
+    "items": {
+      "runeRivals": {
+        "title": "Rune Rivals",
+        "description": "A competitive grid control game."
+      },
+      "birfaturaWrapper": {
+        "title": "Birfatura Wrapper",
+        "description": "A wrapper API for Birfatura API."
+      },
+      "strapiCmsCore": {
+        "title": "Strapi CMS Core",
+        "description": "A Strapi CMS for landing projects."
+      },
+      "r10ProBot": {
+        "title": "R10 Pro Bot",
+        "description": "Intelligent forum automation & bumping tool."
+      },
+      "telegramBotManager": {
+        "title": "Telegram Bot Manager",
+        "description": "Advanced multi-bot management system."
+      },
+      "paduInsaat": {
+        "title": "Padu Insaat",
+        "description": "Premium construction company landing page."
+      },
+      "ayasofyazilimUi": {
+        "title": "Ayasofyazılım UI",
+        "description": "Updating and developing AyasofyazılımUI library."
+      },
+      "schemaForm": {
+        "title": "SchemaForm",
+        "description": "Form generation from schema with JSON Schema standard."
+      }
+    }
+  },
+  "ProjectPage": {
+    "backLabel": "Back to Home",
+    "techStackTitle": "Tech Stack",
+    "cta": {
+      "interested": "Interested in this project?",
+      "ready": "Ready to build something great?",
+      "description": "From modern landing pages to complex web applications, I help bring your vision to life.",
+      "button": "Send Message"
+    }
+  },
+  "Theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Language": {
+    "toggle": "Switch Language",
+    "en": "English",
+    "tr": "Turkish"
+  },
+  "PaduInsaat": {
+    "hero": {
+      "title": "Modern Construction Excellence.",
+      "description": "A premium landing page for Padu Insaat, a construction company with 14 years of experience. The site features advanced GSAP animations, a filterable project gallery, and a high-performance responsive design."
+    },
+    "features": {
+      "title": "Key Highlights",
+      "list": {
+        "animations": {
+          "title": "Advanced Animations",
+          "description": "Immersive scrolling experiences and entrance animations powered by GSAP and Framer Motion."
+        },
+        "gallery": {
+          "title": "Project Gallery",
+          "description": "Dynamic filtering system allowing users to browse projects by category (Residential, Commercial, Renovation)."
+        },
+        "expertise": {
+          "title": "14 Years of Expertise",
+          "description": "Showcasing the company's long-standing history and commitment to quality and trust."
+        },
+        "customer": {
+          "title": "Customer Centric",
+          "description": "Dedicated sections for customer testimonials and detailed service descriptions."
+        }
+      }
+    },
+    "workflow": {
+      "title": "Site Structure",
+      "list": {
+        "hero": {
+          "title": "Hero Slider",
+          "description": "High-impact visual slider demonstrating core value propositions."
+        },
+        "services": {
+          "title": "Services & Projects",
+          "description": "Clean, grid-based layouts to present services and portfolio items effectively."
+        }
+      }
+    },
+    "tech": {
+      "description": "Built with the latest web technologies for speed, SEO, and user experience.",
+      "platform": "Framework & Core",
+      "styling": "Styling & Animation",
+      "items": {
+        "nextjs": {
+          "name": "Next.js 16",
+          "description": "The React framework for the web, utilizing the latest App Router features."
+        },
+        "react": {
+          "name": "React 19",
+          "description": "Leveraging the latest React features for concurrent rendering and server components."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Ensuring type safety and code maintainability throughout the project."
+        },
+        "tailwind": {
+          "name": "Tailwind CSS v4",
+          "description": "Utility-first CSS framework for rapid and modern UI development."
+        },
+        "gsap": {
+          "name": "GSAP",
+          "description": "Professional-grade JavaScript animation library for complex timelines."
+        },
+        "framer": {
+          "name": "Framer Motion",
+          "description": "Production-ready motion library for React components."
+        }
+      }
+    }
+  },
+  "RuneRivals": {
+    "hero": {
+      "title": "Master the Grid. Claim the Elements.",
+      "description": "Rune Rivals is a strategic turn-based game played on a 6x6 grid. Capture tiles, solve puzzles, and use powerful items to dominate your opponents. Choose your element Fire, Water, Earth, or Air and battle for supremacy."
+    },
+    "roomOptions": {
+      "title": "Room Customization",
+      "categories": {
+        "title": "Categories",
+        "value": "5 Types",
+        "description": "Math, Reflex, Memory, Word, Mixed"
+      },
+      "turnTime": {
+        "title": "Turn Time",
+        "value": "Variable",
+        "description": "15s, 30s, or 60s per turn"
+      },
+      "players": {
+        "title": "Players",
+        "value": "2 or 4",
+        "description": "Head-to-head or free-for-all"
+      },
+      "bots": {
+        "title": "Bots",
+        "value": "AI Support",
+        "description": "Add bots to fill empty slots"
+      }
+    },
+    "gameLogic": {
+      "title": "How to Play",
+      "mechanics": {
+        "title": "Core Mechanics",
+        "grid": "The game is played on a 6x6 grid. Each player controls an element (Fire, Water, Earth, Air).",
+        "capture": "Every turn, you capture a tile by solving a question based on the room's category.",
+        "jump": "If your selected tile \"jumps\" over an enemy tile, you attempt to capture both the empty tile and the enemy's tile.",
+        "note": "Note: Capturing enemy tiles makes the question harder!"
+      },
+      "scoring": {
+        "title": "Scoring & Winning",
+        "corners": "Corners:",
+        "borders": "Borders:",
+        "inner": "Inner Tiles:",
+        "pts": "points",
+        "summary": "Points are used to buy powerful items if \"Item Mode\" is enabled. The player with the most tiles/points at the end wins!"
+      }
+    },
+    "items": {
+      "title": "Power-Ups & Items",
+      "modeLabel": "Item Mode: ON/OFF",
+      "shield": "Apply to your own tiles to protect them from being swapped or captured by enemies.",
+      "trap": "Place on empty tiles. Invisible to enemies! If they select it, their points are reduced by 50.",
+      "strike": "Attack an enemy tile directly to neutralize their control.",
+      "phoenix": "Grants a second chance if you answer incorrectly.",
+      "names": {
+        "shield": "Shield",
+        "trap": "Trap",
+        "strike": "Strike",
+        "phoenix": "Phoenix"
+      }
+    },
+    "gallery": {
+      "title": "Gallery",
+      "entry": "Rune Rivals Entry Screen",
+      "create": "Rune Rivals Create Game Screen",
+      "lobby": "Rune Rivals Game Lobby",
+      "action": "Rune Rivals In-Game Action",
+      "strategy": "Rune Rivals In-Game Strategy"
+    },
+    "tech": {
+      "description": "The modern technologies and tools used to build and design Rune Rivals.",
+      "mobile": "Mobile (Frontend)",
+      "backend": "Backend (Game Server)",
+      "devops": "Infrastructure & DevOps",
+      "creative": "Design & Creative",
+      "items": {
+        "expo": {
+          "name": "React Native (Expo)",
+          "description": "Provides a native performance with a single codebase for efficient cross-platform delivery."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Ensures type safety and drastically reduces runtime errors in a complex codebase."
+        },
+        "reanimated": {
+          "name": "React Native Reanimated",
+          "description": "Enables silky smooth 60fps animations essential for game feel."
+        },
+        "socketio_client": {
+          "name": "Socket.IO Client",
+          "description": "Low-latency connection required for real-time multiplayer synchronization."
+        },
+        "zustand": {
+          "name": "Zustand",
+          "description": "Minimalistic state management to handle rapid game state updates without re-render lag."
+        },
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Leverages the same language as the frontend for shared types and logic."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "Simple and robust routing for API endpoints and middleware handling."
+        },
+        "socketio": {
+          "name": "Socket.IO",
+          "description": "Handles room management and event-driven gameplay logic reliably."
+        },
+        "node_typescript": {
+          "name": "TypeScript",
+          "description": "Strict typing across the backend prevents critical logic errors during gameplay."
+        },
+        "supabase": {
+          "name": "Supabase Self-Hosted",
+          "description": "Instantly provides a production-ready database and authentication system."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Guarantees the game server runs identically in development and production."
+        },
+        "coolify": {
+          "name": "Coolify",
+          "description": "Simplifies self-hosting the game server with automatic deployments."
+        },
+        "eas": {
+          "name": "EAS Build",
+          "description": "Offloads complex native builds to the cloud for faster iteration."
+        },
+        "figma": {
+          "name": "Figma",
+          "description": "Rapid prototyping of game UI and user flows."
+        },
+        "photoshop": {
+          "name": "Photoshop",
+          "description": "Creation and editing of game assets."
+        },
+        "gemini": {
+          "name": "Gemini",
+          "description": "For creating game assets."
+        }
+      }
+    }
+  },
+  "Birfatura": {
+    "hero": {
+      "title": "Seamless E-Invoice Integration.",
+      "description": "A powerful Node.js wrapper for the Birfatura API, simplifying e-invoice management for developers. Features comprehensive type definitions and easy-to-use authentication."
+    },
+    "features": {
+      "title": "Key Capabilities",
+      "sync": {
+        "title": "Real-time Sync",
+        "description": "Retrieves new payments immediately from PerfectPanel, ensuring invoices are generated without delay."
+      },
+      "typeSafe": {
+        "title": "Type-Safe Core",
+        "description": "Fully typed interfaces for Order, Payment, and API responses guarantee reliability and prevent runtime errors."
+      },
+      "config": {
+        "title": "Configurable",
+        "description": "Environment-based configuration allows easy deployment across different panel environments and API keys."
+      },
+      "secure": {
+        "title": "Secure API",
+        "description": "Implements token-based authentication to secure endpoints and prevent unauthorized invoice generation."
+      }
+    },
+    "workflow": {
+      "title": "Integration Workflow",
+      "source": {
+        "title": "PerfectPanel Source",
+        "description": "Connects to the PerfectPanel adminapi to fetch orders. Handles complex filtering based on date ranges and payment statuses."
+      },
+      "target": {
+        "title": "BirFatura Target",
+        "description": "Transforms data into the specific JSON structure required by BirFatura. Handles VAT calculation and customer details formatting."
+      }
+    },
+    "tech": {
+      "description": "Built with a robust selection of technologies to ensure reliability, security, and performance.",
+      "backend": "Core & Backend",
+      "security": "Architecture & Security",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "High-performance runtime for handling concurrent API requests and background synchronization."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "Minimalist web framework providing robust routing and middleware capabilities for the API layer."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Ensures strict type safety across data transformation layers, preventing runtime errors in financial logic."
+        },
+        "middleware": {
+          "name": "Middleware Pattern",
+          "description": "Custom middleware for request logging, error handling, and token-based authentication."
+        },
+        "rest": {
+          "name": "REST API",
+          "description": "Exposes standardized endpoints that comply seamlessly with BirFatura's expected integration format."
+        },
+        "token": {
+          "name": "Token Auth",
+          "description": "Secure communication between services using bearer token validation."
+        }
+      }
+    }
+  },
+  "R10Up": {
+    "hero": {
+      "title": "Intelligent Forum Automation.",
+      "description": "An automated solution for R10.net users to manage their topics. Features smart bumping, schedule management, and detailed analytics."
+    },
+    "features": {
+      "title": "Core Capabilities",
+      "emulation": {
+        "title": "Real Browser Emulation",
+        "description": "Uses 'puppeteer-real-browser' to mimic human behavior, successfully bypassing Cloudflare turnstile and bot detection."
+      },
+      "scheduling": {
+        "title": "Smart Scheduling",
+        "description": "Automatically monitors topic statuses and bumps them only when the 'Up' button is active."
+      },
+      "session": {
+        "title": "Session Persistence",
+        "description": "Manages cookies and sessions securely, handling logins and re-authenticating automatically."
+      },
+      "dashboard": {
+        "title": "Centralized Dashboard",
+        "description": "Provides a web-based interface to add topics, configuring settings, and view live screenshots."
+      }
+    },
+    "workflow": {
+      "title": "Automation Workflow",
+      "scanning": {
+        "title": "Scanning & Detection",
+        "description": "Periodically scans the control panel to identify active topics and their current 'Up' status using DOM analysis."
+      },
+      "execution": {
+        "title": "Action Execution",
+        "description": "Executes precise click actions on the 'Up' buttons and verifies success via screenshot logging."
+      }
+    },
+    "tech": {
+      "description": "Built with a focus on reliability and stealth in web automation.",
+      "runtime": "Core & Runtime",
+      "data": "Data & Backend",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "The runtime environment executing the automation logic and server."
+        },
+        "puppeteer": {
+          "name": "Puppeteer",
+          "description": "Headless Chrome API used for controlling the browser and interacting with the forum pages."
+        },
+        "mysql": {
+          "name": "MySQL",
+          "description": "Relational database for storing topic lists, settings, and session cookies."
+        },
+        "express": {
+          "name": "Express.js",
+          "description": "Serves the dashboard UI and handles API requests for the bot control panel."
+        }
+      }
+    }
+  },
+  "StrapiCms": {
+    "hero": {
+      "title": "Flexible Content Management.",
+      "description": "A highly customized Strapi CMS core designed for landing page projects. Features dynamic component builders and localized content support."
+    },
+    "features": {
+      "title": "Core Features",
+      "dynamic": {
+        "title": "Dynamic Page Building",
+        "description": "Utilizes Strapi's Dynamic Zones to create flexible, block-based page layouts."
+      },
+      "media": {
+        "title": "Media Optimization",
+        "description": "Automatic image resizing, format conversion (WebP), and optimization pipeline for fast-loading assets."
+      },
+      "seo": {
+        "title": "SEO Ready",
+        "description": "Pre-configured SEO structures including meta tags, Open Graph data, and structured data schema fields."
+      },
+      "types": {
+        "title": "Type Generation",
+        "description": "Automated TypeScript interface generation ensures your frontend code stays in perfect sync with your content schemas."
+      }
+    },
+    "workflow": {
+      "title": "Development Workflow",
+      "modeling": {
+        "title": "Content Modeling",
+        "description": "Define your data structures using the intuitive Studio content builder. Create reusable components."
+      },
+      "api": {
+        "title": "API Consumption",
+        "description": "Consume your content via auto-generated REST or GraphQL endpoints with built-in filtering and sorting."
+      }
+    },
+    "tech": {
+      "description": "Built on industry-standard technologies for scalability and ease of maintenance.",
+      "platform": "Core Platform",
+      "infrastructure": "Infrastructure",
+      "items": {
+        "strapi": {
+          "name": "Strapi CMS",
+          "description": "The leading open-source headless CMS. Customizable, secure, and developer-first."
+        },
+        "nodejs": {
+          "name": "Node.js",
+          "description": "Reliable javascript runtime powering the CMS backend logic and plugins."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Fully typed codebase for better developer experience and reduced runtime errors."
+        },
+        "postgres": {
+          "name": "PostgreSQL",
+          "description": "Robust relational database for secure and reliable content storage."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Containerized setup for consistent development and production environments."
+        }
+      }
+    }
+  },
+  "TelegramBotManager": {
+    "hero": {
+      "title": "Advanced Multi-Bot Orchestration.",
+      "description": "A comprehensive management system to deploy, configure, and monitor multiple Telegram bots simultaneously."
+    },
+    "features": {
+      "title": "Key Features",
+      "multiBot": {
+        "title": "Multi-Bot Architecture",
+        "description": "Scalable architecture supporting unlimited bots."
+      },
+      "triggers": {
+        "title": "Advanced Trigger System",
+        "description": "Supports over 15 trigger types including keywords and media."
+      },
+      "actionEngine": {
+        "title": "Dynamic Action Engine",
+        "description": "Execute 20+ different actions such as banning users, restricting permissions, or calling external APIs."
+      },
+      "realtime": {
+        "title": "Real-time Updates",
+        "description": "Seamless synchronization of bot configurations and commands across all instances using Supabase Realtime."
+      }
+    },
+    "workflow": {
+      "title": "System Components",
+      "core": {
+        "title": "Bot Manager Core",
+        "description": "Centralized service that instantiates and manages bot lifecycles, handling graceful shutdowns."
+      },
+      "processor": {
+        "title": "Command Processor",
+        "description": "Efficiently routes incoming messages through a middleware chain to match triggers."
+      }
+    },
+    "tech": {
+      "description": "Built with modern technologies for reliability, type safety, and ease of deployment.",
+      "core": "Core & Language",
+      "infrastructure": "Infrastructure & Data",
+      "items": {
+        "nodejs": {
+          "name": "Node.js",
+          "description": "High-performance JavaScript runtime powering the bot logic."
+        },
+        "typescript": {
+          "name": "TypeScript",
+          "description": "Provides static typing and enhanced developer experience across the codebase."
+        },
+        "telegraf": {
+          "name": "Telegraf",
+          "description": "Modern Telegram Bot Framework for Node.js."
+        },
+        "supabase": {
+          "name": "Supabase",
+          "description": "PostgreSQL database with real-time capabilities for instant config updates."
+        },
+        "docker": {
+          "name": "Docker",
+          "description": "Containerized deployment ensuring consistency across development and production environments."
+        }
+      }
+    }
+  },
+  "HomePage": {
+    "title": "Ertugrulcan Bakas - Portfolio"
+  },
+  "Tags": {
+    "automation": "Automation",
+    "strategy": "Strategy",
+    "multiplayer": "Multiplayer",
+    "puzzle": "Puzzle",
+    "integration": "Integration",
+    "backend": "Backend",
+    "nextjs": "Next.js 16",
+    "tailwind": "Tailwind CSS",
+    "gsap": "GSAP",
+    "framer": "Framer Motion",
+    "typescript": "TypeScript",
+    "nodejs": "Node.js",
+    "telegraf": "Telegraf",
+    "supabase": "Supabase",
+    "docker": "Docker",
+    "puppeteer": "Puppeteer",
+    "mysql": "MySQL",
+    "strapi": "Strapi",
+    "cms": "CMS",
+    "headless": "Headless"
+  }
+}

@@ -1,7 +1,9 @@
 import { Download } from "lucide-react";
 import { Button } from "../ui/button";
+import { useTranslations } from "next-intl";
 
 export default function DownloadResume() {
+  const t = useTranslations("Common");
   return (
     <Button
       className="w-full dark:border-zinc-700 dark:bg-black dark:text-white"
@@ -10,7 +12,7 @@ export default function DownloadResume() {
     >
       <a href={"/ertugrulcanbakas-cv.pdf"} download={true}>
         <Download className="mr-2 w-4" />
-        Download my resume
+        {t("downloadResume")}
       </a>
     </Button>
   );

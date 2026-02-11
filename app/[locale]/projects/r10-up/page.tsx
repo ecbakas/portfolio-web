@@ -12,98 +12,103 @@ import HighlightCart from "@/components/molecules/highlight-cart";
 import TechStack from "@/components/molecules/tech-stack";
 import { MySQL } from "@/components/icons/mysql";
 import { Puppeteer } from "@/components/icons/puppeteer";
-
-const PageData = {
-    header: {
-        title: "R10 Pro Bot",
-        backLabel: "Back to Home",
-    },
-    hero: {
-        title: "Intelligent Forum Automation.",
-        description: "A robust automation suite designed to manage R10.net forum topics. It handles complex tasks like Cloudflare bypass, session management, and scheduled topic bumping, all through a centralized dashboard.",
-        tags: ["Automation", "Puppeteer", "Node.js", "MySQL"],
-    },
-    features: {
-        title: "Core Capabilities",
-        list: [
-            {
-                title: "Real Browser Emulation",
-                description: "Uses 'puppeteer-real-browser' to mimic human behavior, successfully bypassing Cloudflare turnstile and bot detection.",
-                icon: Globe,
-            },
-            {
-                title: "Smart Scheduling",
-                description: "Automatically monitors topic statuses and bumps them only when the 'Up' button is active, maximizing visibility without user intervention.",
-                icon: Zap,
-            },
-            {
-                title: "Session Persistence",
-                description: "Manages cookies and sessions securely, handling logins and re-authenticating automatically if sessions expire.",
-                icon: Lock,
-            },
-            {
-                title: "Centralized Dashboard",
-                description: "Provides a web-based interface to add topics, configuring settings, and view live screenshots of the bot's actions.",
-                icon: LayoutDashboard,
-            }
-        ]
-    },
-    workflow: {
-        title: "Automation Workflow",
-        list: [
-            {
-                title: "Scanning & Detection",
-                description: "Periodically scans the control panel to identify active topics and their current 'Up' status using DOM analysis.",
-                icon: Layers,
-            },
-            {
-                title: "Action Execution",
-                description: "Executes precise click actions on the 'Up' buttons and verifies success via screenshot logging and database updates.",
-                icon: Bot,
-            }
-        ]
-    },
-    techStack: {
-        title: "Tech Stack",
-        description: "Built with a focus on reliability and stealth in web automation.",
-        categories: [
-            {
-                name: "Core & Runtime",
-                icon: Server,
-                items: [
-                    {
-                        name: "Node.js",
-                        description: "The runtime environment executing the automation logic and server.",
-                        icon: Nodejs,
-                    },
-                    {
-                        name: "Puppeteer",
-                        description: "Headless Chrome API used for controlling the browser and interacting with the forum pages.",
-                        icon: Puppeteer,
-                    },
-                ]
-            },
-            {
-                name: "Data & Backend",
-                icon: Database,
-                items: [
-                    {
-                        name: "MySQL",
-                        description: "Relational database for storing topic lists, settings, and session cookies.",
-                        icon: MySQL,
-                    },
-                    {
-                        name: "Express.js",
-                        description: "Serves the dashboard UI and handles API requests for the bot control panel.",
-                        icon: Expressjs,
-                    },
-                ]
-            }
-        ]
-    }
-};
+import { useTranslations } from "next-intl";
 
 export default function R10UpPage() {
+    const t = useTranslations("R10Up");
+    const commonT = useTranslations("ProjectPage");
+    const projectsT = useTranslations("Projects.items");
+    const tagsT = useTranslations("Tags");
+
+    const PageData = {
+        header: {
+            title: projectsT("r10ProBot.title"),
+            backLabel: commonT("backLabel"),
+        },
+        hero: {
+            title: t("hero.title"),
+            description: t("hero.description"),
+            tags: [tagsT("automation"), tagsT("puppeteer"), tagsT("nodejs"), tagsT("mysql")],
+        },
+        features: {
+            title: t("features.title"),
+            list: [
+                {
+                    title: t("features.emulation.title"),
+                    description: t("features.emulation.description"),
+                    icon: Globe,
+                },
+                {
+                    title: t("features.scheduling.title"),
+                    description: t("features.scheduling.description"),
+                    icon: Zap,
+                },
+                {
+                    title: t("features.session.title"),
+                    description: t("features.session.description"),
+                    icon: Lock,
+                },
+                {
+                    title: t("features.dashboard.title"),
+                    description: t("features.dashboard.description"),
+                    icon: LayoutDashboard,
+                }
+            ]
+        },
+        workflow: {
+            title: t("workflow.title"),
+            list: [
+                {
+                    title: t("workflow.scanning.title"),
+                    description: t("workflow.scanning.description"),
+                    icon: Layers,
+                },
+                {
+                    title: t("workflow.execution.title"),
+                    description: t("workflow.execution.description"),
+                    icon: Bot,
+                }
+            ]
+        },
+        techStack: {
+            title: commonT("techStackTitle"),
+            description: t("tech.description"),
+            categories: [
+                {
+                    name: t("tech.runtime"),
+                    icon: Server,
+                    items: [
+                        {
+                            name: t("tech.items.nodejs.name"),
+                            description: t("tech.items.nodejs.description"),
+                            icon: Nodejs,
+                        },
+                        {
+                            name: t("tech.items.puppeteer.name"),
+                            description: t("tech.items.puppeteer.description"),
+                            icon: Puppeteer,
+                        },
+                    ]
+                },
+                {
+                    name: t("tech.data"),
+                    icon: Database,
+                    items: [
+                        {
+                            name: t("tech.items.mysql.name"),
+                            description: t("tech.items.mysql.description"),
+                            icon: MySQL,
+                        },
+                        {
+                            name: t("tech.items.express.name"),
+                            description: t("tech.items.express.description"),
+                            icon: Expressjs,
+                        },
+                    ]
+                }
+            ]
+        }
+    };
     return (
         <div className="flex flex-col gap-2 pb-12">
             {/* Header / Navigation */}
@@ -126,7 +131,9 @@ export default function R10UpPage() {
                     </p>
                     <div className="flex gap-2">
                         {PageData.hero.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary">{tag}</Badge>
+                            <Badge key={tag} variant="secondary">
+                                {tagsT.has(tag.toLowerCase()) ? tagsT(tag.toLowerCase()) : tag}
+                            </Badge>
                         ))}
                     </div>
                 </div>
@@ -177,13 +184,13 @@ export default function R10UpPage() {
 
             {/* CTA */}
             <section className="rounded-xl border bg-muted/40 p-8 text-center space-y-4">
-                <h2 className="text-2xl font-semibold">Need Automation?</h2>
+                <h2 className="text-2xl font-semibold">{commonT("cta.interested")}</h2>
                 <p className="text-muted-foreground max-w-xl mx-auto">
-                    Streamline your forum management with reliable, undetectable automation tools.
+                    {commonT("cta.description")}
                 </p>
                 <div className="pt-2">
                     <Link href="/contact" className={buttonVariants({ size: "lg" })}>
-                        Contact for Details <ArrowRight className="h-4 w-4" />
+                        {commonT("cta.button")} <ArrowRight className="h-4 w-4" />
                     </Link>
                 </div>
             </section>
