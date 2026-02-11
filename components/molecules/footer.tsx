@@ -73,7 +73,7 @@ export default function Footer() {
       </Card>
       <Card className="flex min-h-24 w-full items-center justify-center p-4 text-center shadow-none">
         <p className="text-muted-foreground dark:text-white">
-          © 2024 Ertugrulcan Bakas
+          © 2026 Ertugrulcan Bakas
         </p>
       </Card>
     </footer>

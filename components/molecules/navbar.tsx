@@ -41,7 +41,7 @@ export default function Navbar() {
   const active = usePathname();
   console.log(active);
   return (
-    <NavigationMenu className="sticky top-2 min-h-16 w-full max-w-full rounded-lg border bg-white p-2 px-3 shadow-xl dark:bg-black">
+    <NavigationMenu className="sticky top-0 z-50 min-h-16 w-full max-w-full rounded-lg border bg-white p-2 px-3 shadow-xl dark:bg-black">
       <NavigationMenuList className="">
         {navbarItems.map((item) => (
           <NavigationMenuItem key={item.title} asChild>

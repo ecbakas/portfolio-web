@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={cn(font.className, "antialiased overflow-hidden h-dvh")}>
         <ThemeProvider
           attribute="class"

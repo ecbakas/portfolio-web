@@ -5,11 +5,11 @@ export default function Title({ title, className, titleClassName, children }: { 
     <div className={cn("flex items-center justify-between gap-2", className)}>
       <div
         className={cn(
-          "flex items-center gap-2 text-lg font-medium text-muted-foreground dark:text-zinc-400",
+          "flex items-center gap-2 text-lg font-medium text-muted-foreground dark:text-white",
           titleClassName,
         )}
       >
-        <span className="block size-2 rounded-full bg-muted-foreground dark:bg-zinc-400"></span>
+        <span className="block size-2 rounded-full bg-muted-foreground dark:bg-white"></span>
         {title}
       </div>
       {children}
