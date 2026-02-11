@@ -15,7 +15,8 @@
     "home": "Anasayfa",
     "about": "Hakkında",
     "projects": "Projeler",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "knowledgeBase": "Bilgi Birikimi"
   },
   "Footer": {
     "followMe": "Beni takip et",
@@ -127,6 +128,104 @@
     "toggle": "Dili Değiştir",
     "en": "İngilizce",
     "tr": "Türkçe"
+  },
+  "KnowledgeBase": {
+    "title": "Bilgi Birikimi",
+    "description": "Modern, ölçeklenebilir ve sıra dışı yazılımlar geliştirmek için kullandığım teknolojiler bütünü.",
+    "viewMore": "Tüm Teknolojileri Gör",
+    "categories": {
+      "frontend": "Frontend Uzmanlığı",
+      "backend": "Backend ve API'ler",
+      "database": "Veritabanı ve Depolama",
+      "devops": "DevOps ve Bulut",
+      "design": "Tasarım ve Yaratıcılık"
+    },
+    "items": {
+      "nextjs": {
+        "name": "Next.js",
+        "description": "App Router mimarisi"
+      },
+      "react": {
+        "name": "React",
+        "description": "Bileşen mimarisi"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Tip güvenli geliştirme"
+      },
+      "tailwind": {
+        "name": "Tailwind",
+        "description": "Modern CSS çözümleri"
+      },
+      "gsap": {
+        "name": "GSAP",
+        "description": "Zaman tüneli animasyonları"
+      },
+      "framer": {
+        "name": "Framer",
+        "description": "Motion UI kütüphanesi"
+      },
+      "expo": {
+        "name": "Expo",
+        "description": "Evrensel React uygulamaları"
+      },
+      "zustand": {
+        "name": "Zustand",
+        "description": "Durum yönetimi"
+      },
+      "nodejs": {
+        "name": "Node.js",
+        "description": "Ölçeklenebilir JS runtime"
+      },
+      "express": {
+        "name": "Express",
+        "description": "Web framework'leri"
+      },
+      "socketio": {
+        "name": "Socket.IO",
+        "description": "Gerçek zamanlı motor"
+      },
+      "telegraf": {
+        "name": "Telegraf",
+        "description": "Bot framework'leri"
+      },
+      "postgresql": {
+        "name": "PostgreSQL",
+        "description": "İlişkisel veriler"
+      },
+      "mysql": {
+        "name": "MySQL",
+        "description": "RDBMS depolama"
+      },
+      "supabase": {
+        "name": "Supabase",
+        "description": "Backend servisleri"
+      },
+      "docker": {
+        "name": "Docker",
+        "description": "Konteynerizasyon"
+      },
+      "coolify": {
+        "name": "Coolify",
+        "description": "Kendi sunucunda PaaS"
+      },
+      "figma": {
+        "name": "Figma",
+        "description": "Arayüz tasarımı"
+      },
+      "photoshop": {
+        "name": "Photoshop",
+        "description": "Varlık oluşturma"
+      },
+      "ubuntu": {
+        "name": "Ubuntu",
+        "description": "Linux yönetimi"
+      },
+      "cloudflare": {
+        "name": "Cloudflare",
+        "description": "DNS ve WAF güvenliği"
+      }
+    }
   },
   "PaduInsaat": {
     "hero": {

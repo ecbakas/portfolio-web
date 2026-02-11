@@ -1,6 +1,6 @@
 "use client";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { CircleUser, House } from "lucide-react";
+import { CircleUser, House, Library } from "lucide-react";
 import { Link } from "@/lib/navigation";
 
 import {
@@ -26,6 +26,11 @@ const navbarItems = [
     key: "about",
     href: "/about",
     icon: CircleUser,
+  },
+  {
+    key: "knowledgeBase",
+    href: "/knowledge-base",
+    icon: Library,
   },
 ];
 

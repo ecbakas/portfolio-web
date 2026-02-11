@@ -31,7 +31,7 @@ export default async function RootLayout(props: {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="dark" suppressHydrationWarning>
+    <html lang={locale} className="system" suppressHydrationWarning>
       <body className={cn(font.className, "antialiased overflow-hidden h-dvh")}>
         <ThemeProvider
           attribute="class"

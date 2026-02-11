@@ -15,7 +15,8 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "knowledgeBase": "Knowledge Base"
   },
   "Footer": {
     "followMe": "Follow me",
@@ -127,6 +128,104 @@
     "toggle": "Switch Language",
     "en": "English",
     "tr": "Turkish"
+  },
+  "KnowledgeBase": {
+    "title": "Knowledge Base",
+    "description": "A collection of technologies I use to build modern, scalable, and exceptional software.",
+    "viewMore": "View All Technologies",
+    "categories": {
+      "frontend": "Frontend Master",
+      "backend": "Backend & APIs",
+      "database": "Database & Storage",
+      "devops": "DevOps & Cloud",
+      "design": "Design & Creative"
+    },
+    "items": {
+      "nextjs": {
+        "name": "Next.js",
+        "description": "App Router stack"
+      },
+      "react": {
+        "name": "React",
+        "description": "Component architecture"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Type-safe development"
+      },
+      "tailwind": {
+        "name": "Tailwind",
+        "description": "Utility-first CSS"
+      },
+      "gsap": {
+        "name": "GSAP",
+        "description": "Timeline animations"
+      },
+      "framer": {
+        "name": "Framer",
+        "description": "Motion UI library"
+      },
+      "expo": {
+        "name": "Expo",
+        "description": "Universal React apps"
+      },
+      "zustand": {
+        "name": "Zustand",
+        "description": "State management"
+      },
+      "nodejs": {
+        "name": "Node.js",
+        "description": "Scalable JS runtime"
+      },
+      "express": {
+        "name": "Express",
+        "description": "Web frameworks"
+      },
+      "socketio": {
+        "name": "Socket.IO",
+        "description": "Real-time engine"
+      },
+      "telegraf": {
+        "name": "Telegraf",
+        "description": "Bot frameworks"
+      },
+      "postgresql": {
+        "name": "PostgreSQL",
+        "description": "Relational data"
+      },
+      "mysql": {
+        "name": "MySQL",
+        "description": "RDBMS storage"
+      },
+      "supabase": {
+        "name": "Supabase",
+        "description": "Backend as a Service"
+      },
+      "docker": {
+        "name": "Docker",
+        "description": "Containerization"
+      },
+      "coolify": {
+        "name": "Coolify",
+        "description": "Self-hosted PaaS"
+      },
+      "figma": {
+        "name": "Figma",
+        "description": "Interface design"
+      },
+      "photoshop": {
+        "name": "Photoshop",
+        "description": "Asset creation"
+      },
+      "ubuntu": {
+        "name": "Ubuntu",
+        "description": "Linux administration"
+      },
+      "cloudflare": {
+        "name": "Cloudflare",
+        "description": "DNS & WAF security"
+      }
+    }
   },
   "PaduInsaat": {
     "hero": {
