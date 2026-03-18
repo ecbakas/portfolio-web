@@ -52,6 +52,14 @@ export default async function RootLayout(props: {
             </ScrollArea>
           </NextIntlClientProvider>
         </ThemeProvider>
+           {process.env.NEXT_PUBLIC_ANALYTICS_URL &&
+          process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && (
+            <Script
+              async
+              src={process.env.NEXT_PUBLIC_ANALYTICS_URL + "/script.js"}
+              data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
+            />
+          )}
       </body>
     </html>
   );
